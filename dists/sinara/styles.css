@@ -1,0 +1,110 @@
+body{
+    /* overflow: hidden; */
+}
+header {
+    height: 100vh;
+    margin-bottom: 40px;
+}
+
+a{
+    text-decoration: none;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Прозрачный черный */
+    z-index: 1;
+    /* Завышаем его, чтобы он был под текстом */
+}
+
+section {
+    margin: 40px 0;
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.main-gb-color {
+    background-color: #E40134;
+}
+
+.sinara-logo {
+    height: 100%;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.depart-element {
+    padding: 0;
+    margin: auto 5%;
+    color: black;
+    text-decoration: none;
+}
+
+.depart-link {
+    color: black;
+    text-decoration: none;
+}
+
+.parallax-container {
+    position: relative;
+    background-image: url("./images/sinara-logo\ 1\ \(2\).svg");
+    height: 100vh;
+    /* Высота контейнера */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: 60%;
+}
+
+footer{
+    background-color: #212121;
+    color: white;
+    margin-bottom: 0 !important;
+}
+footer .text-muted{
+    color: white !important;
+}
+footer a{
+    color: white;
+}
+.flex-row-reverse .depart-element{
+    text-align: end;
+}
+@media (max-width: 1200px) {
+    header .sinara-logo-container {
+        display: none;
+    }
+
+    header {
+        background-image: url("./images/sinara-logo\ 1\ \(2\).svg");
+        background-position: center center;
+        
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+        height: 100vh;
+    }
+
+    .depart-element {
+        padding: 0;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .parallax-container {
+        background-size: cover;
+    }
+}
