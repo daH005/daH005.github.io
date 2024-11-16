@@ -1,636 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./dists/bootstrap/js/bootstrap.js"></script>
-    <script src="./dists/font-awesome/font-awesome.js"></script>
-    <link rel="stylesheet" href="./dists/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./dists/sinara/styles.css">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-    <title>Синара</title>
-</head>
+    <title>Sinara</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="./dists/sinara/styles.css" rel="stylesheet">
+</head>
 <body>
-    <header class="main-gb-color d-flex parallax-container ">
-        <div class="overlay"></div>
-        <!-- <div class="sinara-logo-container ">
-            <img class="sinara-logo" src="./dists/sinara/images/sinara-logo 1 (2).svg" alt="">
-        </div> -->
-        <div class="d-flex flex-column justify-content-center w-100 align-items-center">
-            <div>
-                <h1>Синара</h1>
+    <main>
+        <div class="sidebar">
+            <div class="sidebar__title">
+                <img class="sidebar__logo" src="./dists/sinara/images/logo.png">
+                <div class="sidebar__sinara">синара</div>
+                <div class="sidebar__machine">транспортные машины</div>
+                
+                <div class="sidebar__service">сервис</div>
+                <div class="sidebar__depo">Сервисное локомотивное депо «Зауралье»</div>
             </div>
-            <div>
-                <h1>Транспортные машины</h1>
+            <img src="./dists/sinara/images/sidebar.png">
+        </div>
+        <div class="content">
+            <div class="content__header">
+                <h1>Книга Почёта</h1>
             </div>
-            <div>
-                <h1 class="text-body-secondary">Интерактивный музей</h1>
+            
+            <div class="content__links">
+                
+                <a href="./pages/Шумилов.html">
+                    <img src="./dists/sinara/images/people/Шумилов.JPG">
+                    <h2>Шумилов Сергей Николаевич</h2>
+                </a>
+
+                <a href="./pages/Бондарев.html">
+                    <img src="./dists/sinara/images/people/Бондарев.JPG">
+                    <h2>Бондарев Александр Георгиевич</h2>
+                </a>
+
+                <a href="./pages/Пирогов.html">
+                    <img src="./dists/sinara/images/people/Пирогов.JPG">
+                    <h2>Пирогов Вячеслав Владимирович</h2>
+                </a>
+
+                <a href="./pages/Самсонов.html">
+                    <img src="./dists/sinara/images/people/Самсонов.JPG">
+                    <h2>Самсонов Михаил Юрьевич</h2>
+                </a>
+
+                <a href="./pages/Соколов.html">
+                    <img src="./dists/sinara/images/people/Соколов.JPG">
+                    <h2>Соколов Михаил Малафеевич</h2>
+                </a>
+
+                <a href="./pages/Усольцев.html">
+                    <img src="./dists/sinara/images/people/Усольцев.JPG">
+                    <h2>Усольцев Михаил Леонидович</h2>
+                </a>
+
+                <a href="./pages/Широков.html">
+                    <img src="./dists/sinara/images/people/Широков.JPG">
+                    <h2>Широков Иван Александрович</h2>
+                </a>
+
+                <a href="./pages/Язовских.html">
+                    <img src="./dists/sinara/images/people/Язовских.JPG">
+                    <h2>Язовских Нина Георгиевна</h2>
+                </a>
+
+                <a href="./pages/Астафьева.html">
+                    <img src="./dists/sinara/images/people/Астафьева.JPG">
+                    <h2>Астафьева Людмила Васильевна</h2>
+                </a>
+
+                <a href="./pages/Вязьмин.html">
+                    <img src="./dists/sinara/images/people/Вязьмин.JPG">
+                    <h2>Вязьмин Михаил Георгиевич</h2>
+                </a>
+
+                <a href="./pages/Ефимов.html">
+                    <img src="./dists/sinara/images/people/Ефимов.JPG">
+                    <h2>Ефимов Анатолий Аркадьевич</h2>
+                </a>
+
+                <a href="./pages/Лукин.html">
+                    <img src="./dists/sinara/images/people/Лукин.JPG">
+                    <h2>Лукин Александр Иванович</h2>
+                </a>
+
+                <a href="./pages/Новохатко.html">
+                    <img src="./dists/sinara/images/people/Новохатко.JPG">
+                    <h2>Новохатко Леонид Васильевич</h2>
+                </a>
+
+                <a href="./pages/Борисов.html">
+                    <img src="./dists/sinara/images/people/Борисов.JPG">
+                    <h2>Борисов Геннадий Александрович</h2>
+                </a>
+
+                <a href="./pages/Рыжих.html">
+                    <img src="./dists/sinara/images/people/Рыжих.JPG">
+                    <h2>Рыжих Михаил Андреевич</h2>
+                </a>
+
+                <a href="./pages/Абрамов.html">
+                    <img src="./dists/sinara/images/people/Абрамов.JPG">
+                    <h2>Абрамов Герман Нестерович</h2>
+                </a>
+
+                <a href="./pages/Аристов.html">
+                    <img src="./dists/sinara/images/people/Аристов.JPG">
+                    <h2>Аристов Владимир Александрович</h2>
+                </a>
+
+                <a href="./pages/Располов.html">
+                    <img src="./dists/sinara/images/people/Располов.JPG">
+                    <h2>Располов Александр Владимирович</h2>
+                </a>
+
+                <a href="./pages/Абрашков.html">
+                    <img src="./dists/sinara/images/people/Абрашков.JPG">
+                    <h2>Абрашков Игорь Владимирович</h2>
+                </a>
+
+                <a href="./pages/Широков 2.html">
+                    <img src="./dists/sinara/images/people/Широков 2.JPG">
+                    <h2>Широков Анатолий Александрович</h2>
+                </a>
+
+                <a href="./pages/Половников.html">
+                    <img src="./dists/sinara/images/people/Половников.JPG">
+                    <h2>Половников Григорий Николаевич</h2>
+                </a>
+
+                <a href="./pages/Борисенко.html">
+                    <img src="./dists/sinara/images/people/Борисенко.JPG">
+                    <h2>Борисенко Трофим Трофимович</h2>
+                </a>
+
+                <a href="./pages/Блинов.html">
+                    <img src="./dists/sinara/images/people/Блинов.JPG">
+                    <h2>Блинов Сергей Владимирович</h2>
+                </a>
+
             </div>
         </div>
-    </header>
-    <section class="container" id="my-sticky-element">
-
-        <a href="./sample/person/f1.html" class="depart-link left" >
-            <div class="d-lg-flex" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-                data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f1.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Шумилов Сергей Николаевич
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12"  >
-                        Сергей Николаевич был принят на работу в депо в 1972 году. На период 1974-1977 гг Сергея
-                        Николаевича призвали на военную службу, после чего он вернулся на предприятие слесарем в цех
-                        подъемки. В 1981 году Сергей Николаевич перешел в периодический цех, в 1982 году получил
-                        повышение до бригадира. В 1985 году Сергей Николаевич был назначен мастером.
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f1.html" class="depart-link right">
-            <div class="d-lg-flex flex-row-reverse" data-aos="fade-left" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000" >
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f2.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Бондарев
-                            Александр
-                            Георгиевич
-
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Александр Георгиевич посвятил железной дороге всю свою жизнь – без малого 40 лет. Он
-                        поступил на работу в локомотивное депо в 1973 году. После перерыва на военную службу в рядах
-                        Советской Армии, с 1975 года, работал бригадиром электромашинного цеха, мастером,
-                        заместителем начальника депо по ремонту электровозов. С 2009 года до выхода на пенсию
-                        Александр Георгиевич руководил нашим депо.
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f3.html" class="depart-link left">
-            <div class="d-lg-flex" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f3.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12 ">
-                        <h4 class="text-capitalize">
-                            пирогов
-                            Вячеслав
-                            Владимирович
-
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Сергей Николаевич был принят на работу в депо в 1972 году. На период 1974-1977 гг Сергея
-                        Николаевича призвали на военную службу, после чего он вернулся на предприятие слесарем в цех
-                        подъемки. В 1981 году Сергей Николаевич перешел в периодический цех, в 1982 году получил
-                        повышение до бригадира. В 1985 году Сергей Николаевич был назначен мастером.
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f4.html" class="depart-link right">
-            <div class="d-lg-flex flex-row-reverse" data-aos="fade-left" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f4.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Самсонов
-                            Михаил
-                            Юрьевич
-
-
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Михаил Юрьевич был принят на работу в депо в 1982 году слесарем-ремонтником. Через год был
-                        переведен слесарем-сантехником. В 2008 году назначен слесарем-ремонтником 6 разряда и
-                        работал на этой должности до выхода на пенсию в 2023 году.
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f5.html" class="depart-link left">
-            <div class="d-lg-flex" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f5.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Соколов
-                            Михаил
-                            Малафеевич
-
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Михаил Малафеевич был принят в депо в 1975 году слесарем по ремонту подвижного состава
-                        аппаратного цеха. Через год был уволен в связи с призывом на военную службу. В 1978 году
-                        вернулся на работу в тот же цех.
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f6.html" class="depart-link right">
-            <div class="d-lg-flex flex-row-reverse" data-aos="fade-left" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f6.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Усольцев
-                            Михаил
-                            Леонидович
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        29 ноября 1978 года Михаил Леонидович пришел работать в депо слесарем по ремонту подвижного
-                        состава в цех подъемки. В 1992 году его перевели на строительство дома хозспособом. Через
-                        два года Михаил Леонидович вернулся на подъемку. В 2010 году переведен в производственный
-                        участок по среднему ремонту электровозов ВЛ-10, в 2013 году – в участок текущего ремонта
-                        электровозов (ТР-3). 23 августа 2018 года вышел на заслуженную пенсию
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f7.html" class="depart-link left">
-            <div class="d-lg-flex" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f7.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Широков
-                            Иван
-                            Александрович
-
-
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Михаил Малафеевич был принят в депо в 1975 году слесарем по ремонту подвижного состава
-                        После службы в Советской армии в июле 1980 года Иван Александрович был принят в Локомотивное
-                        депо Курган подсобным рабочим. Вскоре он был переведен помощником машиниста, затем работал
-                        машинистом электровоза.
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f8.html" class="depart-link right">
-            <div class="d-lg-flex flex-row-reverse" data-aos="fade-left" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f8.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Язовинских
-                            Нина
-                            Георгиевна
-
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        27 апреля 1992 года Нина Георгиевна была принята на работу в цех подъемки мойщиком-уборщиком
-                        подвижного состава. В августе этого же года переведена маляром.
-                        В 2003 году Нина Георгиевна стала оператором ЭВМ. В 2009 году назначена исполнителем
-                        художественно-оформительских работ производственного участка по ремонту и текущему
-                        содержанию зданий и сооружений.
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f9.html" class="depart-link left">
-            <div class="d-lg-flex" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f9.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Астафьева
-                            Людмила
-                            Васильевна
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Людмила Васильевна была принята в локомотивное депо в сентябре 1996 г. мойщиком-уборщиком
-                        подвижного состава.
-                        С 1997 по 2008 годы трудилась в бухгалтерии, в 2014 году была переведена на должность
-                        специалиста и работала в этой должности до выхода на пенсию в 2019 году.
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f10.html" class="depart-link right">
-            <div class="d-lg-flex flex-row-reverse" data-aos="fade-left" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f10.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Вязьмин
-                            Михаил
-                            Георгиевич
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Михаил Георгиевич был принят в локомотивное депо в сентябре 1973 года подсобным рабочим
-                        инструментального цеха, где работал до призыва в армию.
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f11.html" class="depart-link left">
-            <div class="d-lg-flex" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f11.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Ефимов
-                            Анатолий
-                            Аркадьевич
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Анатолий Аркадьевич был принят в депо слесарем по ремонту подвижного состава периодического
-                        цеха 9 июня 1980 года. В июне 1996 года был назначен бригадиром электроцеха.
-                        В 2008 году Анатолий Аркадьевич переведен слесарем-электриком по ремонту электрооборудования
-                        производственного участка по обслуживанию и ремонту электрических сетей.
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f12.html" class="depart-link right">
-            <div class="d-lg-flex flex-row-reverse" data-aos="fade-left" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f12.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Лукин
-                            Александр
-                            Иванович
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Александр Иванович начал работать в локомотивном депо в 1977 году. До 1984 года трудился
-                        слесарем по ремонту подвижного состава, затем прессовщиком изделий из пластмасс.
-                        Все 43 года трудовой деятельности Александр Иванович посвятил железной дороге. На пенсию
-                        вышел в 2022 году.
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f13.html" class="depart-link left">
-            <div class="d-lg-flex" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f13.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Новохатко
-                            Леонид
-                            Васильевич
-
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Леонид Васильевич принят в депо слесарем-трубопроводчиком в 1976 году. В этом же году, после
-                        обучения, был назначен помощником машиниста электровоза.
-                        В 1982 году был переведен слесарем по ремонту подвижного состава аппаратного цеха. С 1991
-                        года по 1994 годы занимался строительными работами, после чего вернулся в аппаратный цех,
-                        где работал до выхода на пенсию.
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f14.html" class="depart-link right">
-            <div class="d-lg-flex flex-row-reverse" data-aos="fade-left" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f14.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Борисов Генадий Александрович
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        В 1973 году Геннадий Александрович принят на работу в депо бригадиром периодического цеха.
-                        Спустя 5 лет безупречной работы назначен мастером, затем старшим мастером. С 2001 по 2008
-                        год Геннадий Александрович трудился мастером ПТО, после чего вернулся в периодический цех. С
-                        2009 года и до выхода на пенсию (2010 год) работал мастером участка по техническому
-                        обслуживанию электровозов и тепловозов.
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f15.html" class="depart-link left">
-            <div class="d-lg-flex" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f15.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Рыжих
-                            Михаил Андреевич
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        В 1971 году, после службы в Советской Армии, Михаил Андреевич поступил на работу в депо
-                        слесарем по ремонту подвижного состава периодического цеха.
-                        В период с 1972 по 1973 год и в 1992 году работал помощником машиниста электровоза. На
-                        пенсию Михаил Андреевич вышел в 2010 году, имея высокий шестой квалификационный разряд.
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f16.html" class="depart-link right">
-            <div class="d-lg-flex flex-row-reverse" data-aos="fade-left" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f16.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Абрамов
-                            Герман
-                            Нестерович
-
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        В 1959 году, после окончания железнодорожного училища, принят в локомотивное депо на
-                        должность помощника машиниста электровоза. В 1969 окончил Уральский электромеханический
-                        институт инженеров железнодорожного транспорта.
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f17.html" class="depart-link left" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-        data-aos-duration="1000">
-            <div class="d-lg-flex">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f17.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Аристов
-                            Владимир
-                            Александрович
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Владимир Александрович начал свою трудовую деятельность в 1957 году в паровозном депо
-                        Карталы. В локомотивное депо ст. Курган принят в 1964 году слесарем аппаратного цеха. В 1975
-                        назначен бригадиром, а через год – мастером цеха. На пенсию Владимир Александрович вышел в
-                        1999 году, а в 2022 вернулся в депо в качестве Председателя Совета ветеранов.
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f18.html" class="depart-link right">
-            <div class="d-lg-flex flex-row-reverse" data-aos="fade-left" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f18.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Распопов Александр
-                            Владимирович
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Александр Владимирович поступил на работу в депо в 1960 году слесарем цеха подъемки. С 1972
-                        года работал мастером и старшим мастером периодического, колесного, заготовительного цехов.
-                        На пенсию вышел в 2002 году.
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f19.html" class="depart-link left">
-            <div class="d-lg-flex" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f19.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Абрашков Игорь
-                            Владимирович
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-                        Игорь Владимирович поступил на работу в депо в 1983 году слесарем по ремонту подвижного
-                        состава автоматного цеха. С 1992 года и до выхода на пенсию работал бригадиром того же
-                        производственного участка.
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f20.html" class="depart-link right">
-            <div class="d-lg-flex flex-row-reverse" data-aos="fade-left" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f20.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Широков Анатолий
-                            Александрович
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-
-                        Анатолий Александрович поступил на работу в депо в 1982 году слесарем по ремонту подвижного
-                        состава. С 2009 года и до выхода на пенсию работал слесарем по осмотру и ремонту локомотивов
-                        на пунктах технического обслуживания. 
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f21.html" class="depart-link left">
-            <div class="d-lg-flex" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f21.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Половников Григорий
-                            Николаевич
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-
-                        Григорий Николаевич поступил на работу в депо в 1973 году фрезеровщиком механического цеха.
-                        В 1976 году обучился профессии токаря и работал по этой специальности до выхода на пенсию
-                        (2011 год). 
-
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f22.html" class="depart-link right">
-            <div class="d-lg-flex flex-row-reverse" data-aos="fade-left" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f22.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Борисенко Трофим
-                            Трофимович
-
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-
-                        Трофим Трофимович принят в депо в 1959 году разнорабочим. Через год обучился профессии
-                        слесаря и работал в должности до призыва на службу в Советской Армии.
-                    </div>
-                </div>
-
-            </div>
-        </a>
-        <a href="./sample/person/f23.html" class="depart-link left">
-            <div class="d-lg-flex" data-aos="fade-right" data-aos-offset="200" data-aos-delay="10"
-            data-aos-duration="1000">
-                <div class="col-lg-2 col-12 img-container">
-                    <img src="./dists/sinara/images/f23.png" alt="" srcset="">
-                </div>
-                <div class=" depart-element">
-                    <div class="col-12">
-                        <h4>
-                            Блинов
-                            Сергей
-                            Владимирович
-                        </h4>
-                    </div>
-                    <div class="col-lg-12 col-12">
-
-                        Сергей Владимирович работал в депо с 2012 года. Начинал слесарем-ремонтником участка по
-                        облуживанию и ремонту электрических сетей и оборудования, затем переведен электромонтером
-                        участка по ремонту электрического оборудования.
-                    </div>
-                </div>
-
-            </div>
-        </a>
-
-    </section>
-
-    <div class="container-fluid">
-        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 mt-5 border-top justify-content-around">
-
-
-            <div class="col mb-3">
-                <a href="/" class="d-flex img-container align-items-center mb-3 link-dark text-decoration-none">
-                    <img src="./dists/sinara/images/sinara-group.png" alt="" srcset="">
-                </a>
-                <p class="text-muted">© 2024</p>
-            </div>
-
-            <div class="col mb-3">
-                <h5>Адрес</h5>
-                <p class="text-muted">г. курган ул. омская стр. 3</p>
-                <a href="tel:+7(3522)49-22-29" class="text-muted">+7 (3522) 49-22-29</a>
-                <p class="mt-3">
-                    <a href="https://vk.com/depokurgan"><i class="fa-brands fa-vk" style="font-size: 3rem;"></i></a>
-                </p>
-            </div>
-
-            <div class="col mb-3">
-                <a href="#">
-                    <h5>Западное депо - “Зауралье”</h5>
-                </a>
-
-            </div>
-
-
-        </footer>
-        <script src="./dists/sinara/main.js"></script>
-    </div>
+    </main>
+    
 </body>
-
 </html>
