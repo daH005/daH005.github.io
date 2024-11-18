@@ -21,7 +21,7 @@
         </div>
         <div class="content">
             <div class="content__header">
-                <a class="content__back" href="../index.html">
+                <a class="content__back" href="../list.html">
                     < Назад
                 </a> 
             </div>
@@ -49,7 +49,60 @@
 
                 </div>
             </div>
+            <div class="content__pagination">
+                <a>Предыдущий герой</a>
+                <a>Следующий герой</a>
+            </div>
+
     </main>
+    
+    <script>
+        let linkEls = document.querySelectorAll(".content__pagination a");
+
+        let people = [
+            "Шумилов Сергей Николаевич",
+            "Бондарев Александр Георгиевич",
+            "Пирогов Вячеслав Владимирович",
+            "Самсонов Михаил Юрьевич",
+            "Соколов Михаил Малафеевич",
+            "Усольцев Михаил Леонидович",
+            "Широков Иван Александрович",
+            "Язовских Нина Георгиевна",
+            "Астафьева Людмила Васильевна",
+            "Вязьмин Михаил Георгиевич",
+            "Ефимов Анатолий Аркадьевич",
+            "Лукин Александр Иванович",
+            "Новохатко Леонид Васильевич",
+            "Борисов Геннадий Александрович",
+            "Рыжих Михаил Андреевич",
+            "Абрамов Герман Нестерович",
+            "Аристов Владимир Александрович",
+            "Располов Александр Владимирович",
+            "Абрашков Игорь Владимирович",
+            "Широков Анатолий Александрович",
+            "Половников Григорий Николаевич",
+            "Борисенко Трофим Трофимович",
+            "Блинов Сергей Владимирович",
+        ];
+
+        let curHumanFullName = document.querySelector("h1").textContent.split("(")[0].trim();
+        let curHumanIndex = people.indexOf(curHumanFullName);
+
+        if (curHumanIndex != people.length - 1) {
+            let fullName = people[curHumanIndex + 1];
+            linkEls[1].href = "./" + fullName + ".html";
+        } else {
+            linkEls[1].remove();
+        }
+
+        if (curHumanIndex != 0) {
+            let fullName = people[curHumanIndex - 1];
+            linkEls[0].href = "./" + fullName + ".html";
+        } else {
+            linkEls[0].remove();
+        }
+
+    </script>
     
 </body>
 </html>
