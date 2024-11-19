@@ -12,7 +12,7 @@
     </div>
     <div class="content">
         <div class="content__header">
-            <a class="content__back" href="../index.html">
+            <a class="content__back" href="../list.html">
                 < Назад
             </a> 
         </div>
@@ -31,4 +31,58 @@
 
             </div>
         </div>
+        <div class="content__pagination">
+            <a>Предыдущий герой</a>
+            <a>Следующий герой</a>
+        </div>
+
+    <script>
+        let linkEls = document.querySelectorAll(".content__pagination a");
+
+        let people = [
+            "Шумилов Сергей Николаевич",
+            "Бондарев Александр Георгиевич",
+            "Пирогов Вячеслав Владимирович",
+            "Самсонов Михаил Юрьевич",
+            "Соколов Михаил Малафеевич",
+            "Усольцев Михаил Леонидович",
+            "Широков Иван Александрович",
+            "Язовских Нина Георгиевна",
+            "Астафьева Людмила Васильевна",
+            "Вязьмин Михаил Георгиевич",
+            "Ефимов Анатолий Аркадьевич",
+            "Лукин Александр Иванович",
+            "Новохатко Леонид Васильевич",
+            "Борисов Геннадий Александрович",
+            "Рыжих Михаил Андреевич",
+            "Абрамов Герман Нестерович",
+            "Аристов Владимир Александрович",
+            "Располов Александр Владимирович",
+            "Абрашков Игорь Владимирович",
+            "Широков Анатолий Александрович",
+            "Половников Григорий Николаевич",
+            "Борисенко Трофим Трофимович",
+            "Блинов Сергей Владимирович",
+        ];
+
+        let curHumanFullName = document.querySelector("h1").textContent.split("(")[0].trim();
+        let curHumanIndex = people.indexOf(curHumanFullName);
+
+        if (curHumanIndex != people.length - 1) {
+            let name = people[curHumanIndex + 1];
+            name = name.split(" ").slice(0, 2).join("_");
+            linkEls[1].href = "./" + name + ".html";
+        } else {
+            linkEls[1].style.display = "none";
+        }
+
+        if (curHumanIndex != 0) {
+            let name = people[curHumanIndex - 1];
+            name = name.split(" ").slice(0, 2).join("_");
+            linkEls[0].href = "./" + name + ".html";
+        } else {
+            linkEls[0].style.display = "none";
+        }
+    </script>
+
 </main>
