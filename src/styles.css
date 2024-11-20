@@ -76,13 +76,14 @@ main {
     margin-bottom: 0;
 }
 
+.train__links,
 .content__links {
     display: flex;
     flex-wrap: wrap;
     max-height: 87vh;
     overflow-y: auto;
 }
-
+.train__links a,
 .content__links a {
     display: block;
     text-decoration: none;
@@ -93,11 +94,11 @@ main {
     margin-right: 25px;
     margin-bottom: 25px;
 }
-
+.train__links a:hover,
 .content__links a:hover {
     opacity: 0.9;
 }
-
+.train__links a img,
 .content__links a img {
     display: block;
     width: 100%;
@@ -105,6 +106,7 @@ main {
     object-fit: cover;
 }
 
+.train__links a h2,
 .content__links a h2 {
     margin: 0;
     padding: 5px 20px;
@@ -263,6 +265,17 @@ footer a {
 
 .flex-row-reverse .depart-element {
     text-align: end;
+}
+
+
+.train__links a{
+    width: 28%;
+    margin: 40px 1%;
+}
+.train__img{
+    height: 20vw;
+    background-position: center;
+    background-size: cover;
 }
 
 @media (max-width: 1200px) {

@@ -1,8 +1,8 @@
 const path = require('path'); // Импортируем модуль "path" для работы с путями файлов
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
-const fs = require('fs');
-const data = JSON.parse(fs.readFileSync('./src/sample/data.json', 'utf-8'));
+const dataLoader = require("./dataLoader")
+const templateRender = require('./render');
 
 
 module.exports = {
@@ -11,51 +11,26 @@ module.exports = {
     output: {
         filename: 'bundle.js', // Имя выходного файла сборки
         path: path.resolve(__dirname, 'dist'), // Путь для выходного файла сборки
-        // publicPath: '/',
     },
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'), // путь к папке с вашими файлами
+        compress: true,
+        port: 9000, // порт для сервера
+        hot: true // горячая замена модулей
+      },
     module: {
         rules: [
-            // {
-            //     test: /\.svg/,
-            //     use: {
-            //         loader: "svg-url-loader",
-            //     },
-            // },
             {
                 test: /\.mustache$/,
                 use: [
                     {
                         loader: 'mustache-loader',
-                        options: {
-                            // Опции Mustache, если нужно
-                        }
                     }
                 ]
             },
-            // {
-            //     test: /\.(png|jpe?g|gif)$/i,
-            //     use: [
-            //         {
-            //             loader: 'file-loader',
-            //             options: {
-            //                 // Указываем папку, куда будут сохраняться изображения
-            //                 // outputPath: 'images',
-
-            //             },
-            //         },
-            //     ],
-            // },
-            // {
-            //     test: /\.html$/i,
-            //     loader: "html-loader",
-            // },
             {
-
-                test: /\.css$/, // Регулярное выражение для обработки файлов с расширением .css
-                use: ['style-loader', 'css-loader'], // Загрузчики, используемые для обработки CSS-файлов
-                // options: {
-                //     import: true,
-                //   },
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'], 
             },
         ],
     },
@@ -66,7 +41,7 @@ module.exports = {
               { from: path.resolve(__dirname, 'src/dists/images'), to: path.resolve(__dirname, 'dist/dists/images') },
             ],
           }),
-        ...data.map(item => {
+        ...dataLoader.person.map(item => {
         return new HtmlWebpackPlugin({
             template: './src/sample/person.mustache',
             filename: `pages/${item.heading.replace(" ", "_").split(" ")[0]}.html`,
@@ -75,6 +50,15 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
         template: './src/index.html'
+    }),
+    new HtmlWebpackPlugin({
+        template: './src/road.mustache',
+        filename: 'road.html',
+        templateParameters: {
+            sidebar: templateRender.getSidebarTemplate(),
+            trains: dataLoader.trains 
+        }
+        
     }),
     new HtmlWebpackPlugin({
         template: './src/list.html',
