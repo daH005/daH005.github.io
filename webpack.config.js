@@ -50,7 +50,7 @@ module.exports = {
                 filename: `pages/${item.id}.html`,
                 templateParameters: {
                     ...item,
-                    prevId: item.id > 1 ? item.id : null,
+                    prevId: item.id > 1 ? item.id - 1: null,
                     nextId: item.id < dataLoader.person.length ? item.id + 1 : null,
                 },
             });
