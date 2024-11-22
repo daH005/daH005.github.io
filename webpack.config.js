@@ -44,14 +44,14 @@ module.exports = {
             ],
         }),
 
-        ...dataLoader.person.map(item => {
+        ...dataLoader.persons.map(item => {
             return new HtmlWebpackPlugin({
                 template: './src/sample/person.mustache',
                 filename: `pages/${item.id}.html`,
                 templateParameters: {
                     ...item,
                     prevId: item.id > 1 ? item.id - 1: null,
-                    nextId: item.id < dataLoader.person.length ? item.id + 1 : null,
+                    nextId: item.id < dataLoader.persons.length ? item.id + 1 : null,
                 },
             });
         }),
@@ -73,7 +73,7 @@ module.exports = {
             template: './src/list.mustache',
             filename: 'list.html',
             templateParameters: {
-                person: dataLoader.person,
+                persons: dataLoader.persons,
             },
         }),
     ],
