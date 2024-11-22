@@ -1,23 +1,22 @@
-const path = require('path'); // Импортируем модуль "path" для работы с путями файлов
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 const dataLoader = require("./dataLoader")
 const templateRender = require('./render');
 
-
 module.exports = {
-    entry: './src/index.js', // Точка входа для сборки проекта
+    entry: './index.js',
 
     output: {
-        filename: 'bundle.js', // Имя выходного файла сборки
-        path: path.resolve(__dirname, 'dist'), // Путь для выходного файла сборки
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
     },
 
     devServer: {
-        contentBase: path.join(__dirname, 'dist'), // путь к папке с вашими файлами
+        contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        port: 9000, // порт для сервера
-        hot: true // горячая замена модулей
+        port: 9000,
+        hot: true
     },
 
     module: {
@@ -40,50 +39,43 @@ module.exports = {
     plugins: [
         new CopyPlugin({
             patterns: [
-                { from: path.resolve(__dirname, 'src/dists/images'), to: path.resolve(__dirname, 'dist/dists/images') },
+                { 
+                    from: path.resolve(__dirname, 'src/dists'), 
+                    to: path.resolve(__dirname, 'dist/dists') 
+                },
             ],
         }),
 
-        ...dataLoader.persons.map(item => {
+        new HtmlWebpackPlugin({
+            templateContent: templateRender.renderHome(),
+            filename: 'index.html',
+        }),
+
+        new HtmlWebpackPlugin({
+            templateContent: templateRender.renderPersons(dataLoader.persons),
+            filename: 'persons.html',
+        }),
+
+        ...dataLoader.persons.map(person => {
             return new HtmlWebpackPlugin({
-                template: './src/sample/person.mustache',
-                filename: `pages/${item.id}.html`,
-                templateParameters: {
-                    ...item,
-                    prevId: item.id > 1 ? item.id - 1: null,
-                    nextId: item.id < dataLoader.persons.length ? item.id + 1 : null,
-                },
+                templateContent: templateRender.renderPerson(person, dataLoader.persons.length),
+                filename: `persons/${person.id}.html`,
             });
         }),
 
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            templateContent: templateRender.renderTrains(dataLoader.trains),
+            filename: 'trains.html',
         }),
 
-        new HtmlWebpackPlugin({
-            template: './src/road.mustache',
-            filename: 'road.html',
-            templateParameters: {
-                sidebar: templateRender.getSidebarTemplate(),
-                trains: dataLoader.trains 
-            },
-        }),
-
-        new HtmlWebpackPlugin({
-            template: './src/list.mustache',
-            filename: 'list.html',
-            templateParameters: {
-                persons: dataLoader.persons,
-            },
-        }),
     ],
 
     devServer: {  // ToDo: Два ключа "devServer"? Выходит этот переопределяет первый? Или я чего-то не понимаю?
         static: {
-            directory: path.join(__dirname, 'dist'), // Каталог для статики
+            directory: path.join(__dirname, 'dist'),
         },
-        open: true, // Автоматически открывать браузер
+        open: true,
     },
 
-    mode: 'development', // Режим сборки
+    mode: 'development',
 };

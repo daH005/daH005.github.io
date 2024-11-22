@@ -1,0 +1,25 @@
+<div class="content__header">
+    <a class="content__back" href="/persons.html">
+        < Назад
+    </a> 
+</div>
+
+<div class="content__card">
+    <img class="content__avatar" src="/dists/images/persons/{{image}}">
+    <div class="content__text">
+        <h1>
+            {{heading}}
+        </h1>
+        {{&content}}
+        
+        <span class="content__book">
+            Занесен в Книгу Почёта в 2024 году
+        </span>
+
+    </div>
+</div>
+
+<div class="content__pagination">
+    <a {{#prevId}}href="./{{prevId}}.html"{{/prevId}}>Предыдущий герой</a>
+    <a {{#nextId}}href="./{{nextId}}.html"{{/nextId}}>Следующий герой</a>
+</div>

@@ -6,7 +6,7 @@ body {
     overflow: hidden;
 }
 
-main {
+.page-with-sidebar {
     display: flex;
     font-size: 1vw;
 }
@@ -239,7 +239,7 @@ a {
 
 .parallax-container {
     position: relative;
-    background-image: url("./dists/images/sinara-logo\ 1\ \(2\).svg");
+    background-image: url("./images/sinara-logo\ 1\ \(2\).svg");
     height: 100vh;
     /* Высота контейнера */
     background-attachment: fixed;
@@ -284,7 +284,7 @@ footer a {
     }
 
     header {
-        background-image: url("./dists/images/sinara-logo\ 1\ \(2\).svg");
+        background-image: url("./images/sinara-logo\ 1\ \(2\).svg");
         background-position: center center;
 
         background-repeat: no-repeat;
