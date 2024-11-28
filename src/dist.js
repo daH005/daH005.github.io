@@ -6,6 +6,12 @@ const DIST_PERSON_FILENAME_TEMPLATE = {
         return this.path_temp.replace('{id}', id);
     }
 }
+const DIST_TRAIN_FILENAME_TEMPLATE = { 
+    path_temp: `trains/{id}.html`,
+    make: function(id) {
+        return this.path_temp.replace('{id}', id);
+    }
+}
 const DIST_TRAINS_FILENAME = 'trains.html';
 const DIST_STATIC_FOLDER = 'static';
 
@@ -15,4 +21,5 @@ module.exports = {
     DIST_PERSON_FILENAME_TEMPLATE,
     DIST_TRAINS_FILENAME,
     DIST_STATIC_FOLDER,
+    DIST_TRAIN_FILENAME_TEMPLATE
 }

@@ -16,6 +16,7 @@ const _personsTemp = _readTemplate('persons.mustache');
 const _personTemp = _readTemplate('person.mustache');
 
 const _trainsTemp = _readTemplate('trains.mustache');
+const _trainTemp = _readTemplate('train.mustache');
 
 function renderHome() {
     return _renderWrapper(
@@ -72,6 +73,20 @@ function renderPerson(person, personsLength) {
     );
 }
 
+function renderTrain(train, dataLength) {
+    return _renderWrapper(
+        train.heading,
+        _renderWithSidebar(
+            renderTemplate(_trainTemp, {
+                ...train,
+                prevId: train.id > 1 ? train.id - 1: null,
+                nextId: train.id < dataLength ? train.id + 1 : null,
+                TRAINS_URL,
+            }),
+        ),
+    );
+}
+
 function _renderWithSidebar(content) {
     return renderTemplate(_withSidebarTemp, {
         content,
@@ -94,4 +109,5 @@ module.exports = {
     renderPersons,
     renderPerson,
     renderTrains,
+    renderTrain
 }

@@ -1,5 +1,5 @@
 <div class="content__header">
-    <a class="content__back" href="{{PERSONS_URL}}">
+    <a class="content__back" href="{{TRAINS_URL}}">
         < Назад
     </a> 
 </div>
@@ -9,8 +9,8 @@
     <div class="content__text">
         <h1>
             {{heading}}
-        </h1>
-        {{&content}}
+        </h1> 
+        {{&description}}
         
         <span class="content__book">
             {{footer}}
@@ -20,6 +20,6 @@
 </div>
 
 <div class="content__pagination">
-    <a {{#prevId}}href="./{{prevId}}.html"{{/prevId}}>Предыдущий герой</a>
-    <a {{#nextId}}href="./{{nextId}}.html"{{/nextId}}>Следующий герой</a>
+    <a {{#prevId}}href="./{{prevId}}.html"{{/prevId}}>Предыдущий локомотив</a>
+    <a {{#nextId}}href="./{{nextId}}.html"{{/nextId}}>Следующий локомотив</a>
 </div>
