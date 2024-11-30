@@ -1,7 +1,7 @@
 const { render: renderTemplate } = require('mustache');
 
 const { TEMPLATES_PATH } = require('./paths.js');
-const { HOME_URL, PERSONS_URL, PERSON_URL_TEMPLATE, TRAINS_URL, STYLE_URLS, SCRIPT_URLS, LOGO_IMAGE_URL, SIDEBAR_IMAGE_URL } = require('./urls.js');
+const { HOME_URL, PERSONS_URL, TRAINS_URL, STYLE_URLS, SCRIPT_URLS, LOGO_IMAGE_URL, SIDEBAR_IMAGE_URL } = require('./urls.js');
 
 function _readTemplate(filename) {
     return TEMPLATES_PATH.join(filename).readFileSync('utf-8');

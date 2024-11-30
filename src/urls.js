@@ -1,23 +1,30 @@
-const { DIST_HOME_FILENAME, DIST_PERSONS_FILENAME, DIST_PERSON_FILENAME_TEMPLATE, DIST_TRAINS_FILENAME, DIST_STATIC_FOLDER } = require('./dist.js');
+const { DIST_HOME_FILENAME, DIST_PERSONS_FILENAME, DIST_PERSON_FILENAME_TEMPLATE, DIST_TRAINS_FILENAME, DIST_TRAIN_FILENAME_TEMPLATE, DIST_STATIC_FOLDER } = require('./dist.js');
+const { DIST_PATH } = require('./paths.js');
 
-const HOME_URL = '/' + DIST_HOME_FILENAME;
-const PERSONS_URL = '/' + DIST_PERSONS_FILENAME;
+const BASE_URL = DIST_PATH.toString() + '/';
+
+const HOME_URL = BASE_URL + DIST_HOME_FILENAME;
+const PERSONS_URL = BASE_URL + DIST_PERSONS_FILENAME;
 const PERSON_URL_TEMPLATE = {
     ...DIST_PERSON_FILENAME_TEMPLATE,
-    path_temp: '/' + DIST_PERSON_FILENAME_TEMPLATE.path_temp,
+    path_temp: BASE_URL + DIST_PERSON_FILENAME_TEMPLATE.path_temp,
 }
-const TRAINS_URL = '/' + DIST_TRAINS_FILENAME;
+const TRAINS_URL = BASE_URL + DIST_TRAINS_FILENAME;
+const TRAIN_URL_TEMPLATE = {
+    ...DIST_TRAIN_FILENAME_TEMPLATE,
+    path_temp: BASE_URL + DIST_TRAIN_FILENAME_TEMPLATE.path_temp,
+}
 
 const STYLE_URLS = [
-    '/' + DIST_STATIC_FOLDER + '/styles.css',
-    '/' + DIST_STATIC_FOLDER + '/bootstrap/css/bootstrap.min.css',
+    BASE_URL + DIST_STATIC_FOLDER + '/styles.css',
+    BASE_URL + DIST_STATIC_FOLDER + '/bootstrap/css/bootstrap.min.css',
 ]
 const SCRIPT_URLS = [
-    '/' + DIST_STATIC_FOLDER + '/bootstrap/js/bootstrap.js',
-    '/' + DIST_STATIC_FOLDER + 'font-awesome/font-awesome.js',
+    BASE_URL + DIST_STATIC_FOLDER + '/bootstrap/js/bootstrap.js',
+    BASE_URL + DIST_STATIC_FOLDER + 'font-awesome/font-awesome.js',
 ]
 
-const _IMAGES_URL = '/' + DIST_STATIC_FOLDER + '/images';
+const _IMAGES_URL = BASE_URL + DIST_STATIC_FOLDER + '/images';
 const LOGO_IMAGE_URL = _IMAGES_URL + '/logo.png';
 const SIDEBAR_IMAGE_URL = _IMAGES_URL + '/sidebar.png';
 
@@ -37,6 +44,7 @@ module.exports = {
     PERSONS_URL,
     PERSON_URL_TEMPLATE,
     TRAINS_URL,
+    TRAIN_URL_TEMPLATE,
     STYLE_URLS,
     SCRIPT_URLS,
     LOGO_IMAGE_URL,
