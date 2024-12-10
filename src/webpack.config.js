@@ -2,9 +2,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 const { persons, trains } = require('./data.js');
-const { renderHome, renderPersons, renderPerson, renderTrains, renderTrain } = require('./render.js');
+const { renderHome, 
+        renderPersons, renderPerson, 
+        renderTrains, renderTrain,
+        renderAwardsMain, renderAwardsYears, renderAwardsBoss, renderAwardsBook } = require('./render/render.js');
 const { STATIC_PATH, DIST_PATH } = require('./paths.js');
-const { DIST_HOME_FILENAME, DIST_PERSONS_FILENAME, DIST_PERSON_FILENAME_TEMPLATE, DIST_TRAINS_FILENAME, DIST_STATIC_FOLDER, DIST_TRAIN_FILENAME_TEMPLATE } = require('./dist.js');
+const { DIST_HOME_FILENAME, 
+        DIST_PERSONS_FILENAME, DIST_PERSON_FILENAME_TEMPLATE, 
+        DIST_TRAINS_FILENAME, DIST_TRAIN_FILENAME_TEMPLATE,
+        DIST_AWARDS_MAIN_FILENAME, DIST_AWARDS_YEARS_FILENAME, DIST_AWARDS_BOSS_FILENAME, DIST_AWARDS_BOOK_FILENAME,
+        DIST_STATIC_FOLDER } = require('./dist.js');
 
 module.exports = {
     output: {
@@ -38,12 +45,16 @@ module.exports = {
             templateContent: renderPersons(persons),
             filename: DIST_PERSONS_FILENAME,
         }),
-
         ...persons.map(person => {
             return new HtmlWebpackPlugin({
                 templateContent: renderPerson(person, persons.length),
                 filename: DIST_PERSON_FILENAME_TEMPLATE.make(person.id),
             });
+        }),
+
+        new HtmlWebpackPlugin({
+            templateContent: renderTrains(trains),
+            filename: DIST_TRAINS_FILENAME,
         }),
         ...trains.map(train => {
             return new HtmlWebpackPlugin({
@@ -53,8 +64,20 @@ module.exports = {
         }),
 
         new HtmlWebpackPlugin({
-            templateContent: renderTrains(trains),
-            filename: DIST_TRAINS_FILENAME,
+            templateContent: renderAwardsMain(),
+            filename: DIST_AWARDS_MAIN_FILENAME,
+        }),
+        new HtmlWebpackPlugin({
+            templateContent: renderAwardsYears(),
+            filename: DIST_AWARDS_YEARS_FILENAME,
+        }),
+        new HtmlWebpackPlugin({
+            templateContent: renderAwardsBoss(),
+            filename: DIST_AWARDS_BOSS_FILENAME,
+        }),
+        new HtmlWebpackPlugin({
+            templateContent: renderAwardsBook(),
+            filename: DIST_AWARDS_BOOK_FILENAME,
         }),
 
     ],
