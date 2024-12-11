@@ -5,7 +5,8 @@ const { HOME_URL,
         AWARDS_MAIN_URL, AWARDS_YEARS_URL, AWARDS_BOSS_URL, AWARDS_BOOK_URL,
         STYLE_URLS, SCRIPT_URLS, 
         IMAGE_URLS } = require('../urls.js');
-const { HOME_URLS, AWARDS_PAGE_HEADINGS, AWARDS_MAIN_URLS } = require('./params.js');
+const { HOME_URLS, 
+        AWARDS_PAGE_HEADINGS, AWARDS_MAIN_URLS, AWARDS_YEARS } = require('./params.js');
 const { TEMPLATES } = require('./templates.js');
 
 function renderHome() {
@@ -78,7 +79,7 @@ function renderAwardsYears() {
     return _renderAwardsBase(
         AWARDS_PAGE_HEADINGS[0], 
         renderTemplate(TEMPLATES.awardsYears, {
-            YEARS_IMAGE_URLS: IMAGE_URLS.awardsYears,
+            years: AWARDS_YEARS,
         }),
     );
 }

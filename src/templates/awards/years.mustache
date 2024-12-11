@@ -6,14 +6,29 @@
 
 <h2>«Лучшее Сервисное локомотивное депо» ООО СТМ-Сервис»</h2>
 <div class="years">
-	<a>2017 год</a>
-	<a>2018 год</a>
-	<a>2019 год</a>
-	<a>2020 год</a>
-	<a>2022 год</a>
-	<a>2023 год</a>
-</div>
+	<script>
+		const ACTIVE_YEAR_CARD_CLASS = 'year__card--active';
 
-{{#YEARS_IMAGE_URLS}}
-<img src="{{.}}">
-{{/YEARS_IMAGE_URLS}}
+		function showYearCard(buttonEl) {
+			buttonEl.nextElementSibling.classList.toggle(ACTIVE_YEAR_CARD_CLASS);
+		}
+
+		function hideYearCard(buttonEl) {
+			buttonEl.closest('.year__card').classList.toggle(ACTIVE_YEAR_CARD_CLASS);
+		}
+	</script>
+
+	{{#years}}
+	<div class="year">
+		<a onclick="showYearCard(this)">{{year}} год</a>
+		
+		<div class="year__card">
+			<div class="year__card__relative">
+				<button onclick="hideYearCard(this)">Закрыть</button>
+				<img src="{{url}}">
+			</div>
+		</div>
+
+	</div>
+	{{/years}}
+</div>

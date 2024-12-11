@@ -1,6 +1,7 @@
 const { PERSONS_URL, TRAINS_URL, 
         AWARDS_MAIN_URL, AWARDS_YEARS_URL, AWARDS_BOSS_URL, AWARDS_BOOK_URL,
         IMAGE_URLS } = require('../urls.js');
+const { awardsYears } = require('../awardsYears.js');
 
 const HOME_URLS = [
     {
@@ -41,9 +42,17 @@ const AWARDS_MAIN_URLS = [
     },
 ];
 
+const AWARDS_YEARS = awardsYears.map((year, index) => {
+    return {
+        year,
+        url: IMAGE_URLS.awardsYears[index],
+    }
+});
+
 module.exports = {
     HOME_URLS,
 
     AWARDS_PAGE_HEADINGS,
     AWARDS_MAIN_URLS,
+    AWARDS_YEARS,
 }

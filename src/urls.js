@@ -4,6 +4,7 @@ const { DIST_HOME_FILENAME,
         DIST_AWARDS_MAIN_FILENAME, DIST_AWARDS_YEARS_FILENAME, DIST_AWARDS_BOSS_FILENAME, DIST_AWARDS_BOOK_FILENAME,
         DIST_STATIC_FOLDER } = require('./dist.js');
 const { DIST_PATH } = require('./paths.js');
+const { awardsYears } = require('./awardsYears.js');
 
 const BASE_URL = DIST_PATH.toString() + '/';
 
@@ -59,7 +60,7 @@ const IMAGE_URLS = {
     awardsBossIcon: _IMAGES_BASE_URL + '/awards/sections/boss.png',
     awardsBookIcon: _IMAGES_BASE_URL + '/awards/sections/book.png',
 
-    awardsYears: [2017, 2018, 2019, 2020, 2022, 2023].map(year => {
+    awardsYears: awardsYears.map(year => {
         return _IMAGES_BASE_URL + '/awards/years/' + year + '.png'; 
     }),
     
