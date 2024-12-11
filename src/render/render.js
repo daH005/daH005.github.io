@@ -4,7 +4,7 @@ const { HOME_URL,
         PERSONS_URL, TRAINS_URL, 
         AWARDS_MAIN_URL, AWARDS_YEARS_URL, AWARDS_BOSS_URL, AWARDS_BOOK_URL,
         STYLE_URLS, SCRIPT_URLS, 
-        LOGO_IMAGE_URL, SIDEBAR_IMAGE_URL } = require('../urls.js');
+        IMAGE_URLS } = require('../urls.js');
 const { HOME_URLS, AWARDS_PAGE_HEADINGS, AWARDS_MAIN_URLS } = require('./params.js');
 const { TEMPLATES } = require('./templates.js');
 
@@ -75,35 +75,41 @@ function renderAwardsMain() {
 }
 
 function renderAwardsYears() {
-    return _renderWrapper(
-        AWARDS_PAGE_HEADINGS[0],
-        _renderWithSidebar(
-            renderTemplate(TEMPLATES.awardsYears, {
-                // ...
-            }),
-            AWARDS_MAIN_URL,
-        ),
+    return _renderAwardsBase(
+        AWARDS_PAGE_HEADINGS[0], 
+        renderTemplate(TEMPLATES.awardsYears, {
+            YEARS_IMAGE_URLS: IMAGE_URLS.awardsYears,
+        }),
     );
 }
 
 function renderAwardsBoss() {
-    return _renderWrapper(
-        AWARDS_PAGE_HEADINGS[1],
-        _renderWithSidebar(
-            renderTemplate(TEMPLATES.awardsBoss, {
-                // ...
-            }),
-            AWARDS_MAIN_URL,
-        ),
+    return _renderAwardsBase(
+        AWARDS_PAGE_HEADINGS[1], 
+        renderTemplate(TEMPLATES.awardsBoss, {
+            BOSS_IMAGE_URL: IMAGE_URLS.awardsBoss,
+            SIGN_IMAGE_URL: IMAGE_URLS.awardsBossSign,
+        }),
     );
 }
 
 function renderAwardsBook() {
+    return _renderAwardsBase(
+        AWARDS_PAGE_HEADINGS[2], 
+        renderTemplate(TEMPLATES.awardsBook, {
+            MEN_IMAGE_URL: IMAGE_URLS.awardsBookMen,
+            PAPER_IMAGE_URL: IMAGE_URLS.awardsBookPaper,
+        }),
+    );
+}
+
+function _renderAwardsBase(heading, content) {
     return _renderWrapper(
-        AWARDS_PAGE_HEADINGS[2],
+        heading,
         _renderWithSidebar(
-            renderTemplate(TEMPLATES.awardsBook, {
-                // ...
+            renderTemplate(TEMPLATES.awardsBase, {
+                heading,
+                content
             }),
             AWARDS_MAIN_URL,
         ),
@@ -114,8 +120,8 @@ function _renderWithSidebar(content, backUrl) {
     return renderTemplate(TEMPLATES.withSidebar, {
         content,
         backUrl,
-        LOGO_IMAGE_URL,
-        SIDEBAR_IMAGE_URL,
+        LOGO_IMAGE_URL: IMAGE_URLS.logo,
+        SIDEBAR_IMAGE_URL: IMAGE_URLS.sidebar,
     });
 }
 

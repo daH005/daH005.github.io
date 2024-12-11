@@ -30,22 +30,44 @@ const STYLE_URLS = [
 ]
 const SCRIPT_URLS = [
     BASE_URL + DIST_STATIC_FOLDER + '/bootstrap/js/bootstrap.js',
-    BASE_URL + DIST_STATIC_FOLDER + 'font-awesome/font-awesome.js',
+    BASE_URL + DIST_STATIC_FOLDER + '/font-awesome/font-awesome.js',
 ]
 
-const _IMAGES_URL = BASE_URL + DIST_STATIC_FOLDER + '/images';
-const LOGO_IMAGE_URL = _IMAGES_URL + '/logo.png';
-const SIDEBAR_IMAGE_URL = _IMAGES_URL + '/sidebar.png';
+const _IMAGES_BASE_URL = BASE_URL + DIST_STATIC_FOLDER + '/images';
+const IMAGE_URLS = {
+    logo: _IMAGES_BASE_URL + '/logo.png',
+    sidebar: _IMAGES_BASE_URL + '/sidebar.png',
 
-const PERSON_IMAGE_URL_TEMPLATE = {
-    path_temp: _IMAGES_URL + '/persons/',
-    make: function(filename) {
-        return this.path_temp + filename;
-    }
-}
-const TRAIN_IMAGE_URL_TEMPLATE = {
-    ...PERSON_IMAGE_URL_TEMPLATE,
-    path_temp: _IMAGES_URL + '/trains/',
+    personTemplate: {
+        pathTemp: _IMAGES_BASE_URL + '/persons/',
+        make: function(filename) {
+            return this.pathTemp + filename;
+        }
+    },
+    trainTemplate: {
+        pathTemp: _IMAGES_BASE_URL + '/trains/',
+        make: function(filename) {
+            return this.pathTemp + filename;
+        }
+    },
+
+    personsIcon: _IMAGES_BASE_URL + '/menu/persons.png',
+    trainsIcon: _IMAGES_BASE_URL + '/menu/trains.png',
+    awardsIcon: _IMAGES_BASE_URL + '/menu/awards.png',
+
+    awardsYearsIcon: _IMAGES_BASE_URL + '/awards/sections/years.png',
+    awardsBossIcon: _IMAGES_BASE_URL + '/awards/sections/boss.png',
+    awardsBookIcon: _IMAGES_BASE_URL + '/awards/sections/book.png',
+
+    awardsYears: [2017, 2018, 2019, 2020, 2022, 2023].map(year => {
+        return _IMAGES_BASE_URL + '/awards/years/' + year + '.png'; 
+    }),
+    
+    awardsBoss: _IMAGES_BASE_URL + '/awards/boss/boss.png',
+    awardsBossSign: _IMAGES_BASE_URL + '/awards/boss/sign.png',
+
+    awardsBookMen: _IMAGES_BASE_URL + '/awards/book/men.png',
+    awardsBookPaper: _IMAGES_BASE_URL + '/awards/book/paper.png',
 }
 
 module.exports = {
@@ -65,8 +87,5 @@ module.exports = {
     STYLE_URLS,
     SCRIPT_URLS,
 
-    LOGO_IMAGE_URL,
-    SIDEBAR_IMAGE_URL,
-    PERSON_IMAGE_URL_TEMPLATE,
-    TRAIN_IMAGE_URL_TEMPLATE,
+    IMAGE_URLS,
 }

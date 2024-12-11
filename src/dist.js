@@ -2,16 +2,16 @@ const DIST_HOME_FILENAME = 'index.html';
 
 const DIST_PERSONS_FILENAME = 'persons.html';
 const DIST_PERSON_FILENAME_TEMPLATE = {
-    path_temp: `persons/{id}.html`,
+    pathTemp: `persons/{id}.html`,
     make: function(id) {
-        return this.path_temp.replace('{id}', id);
+        return this.pathTemp.replace('{id}', id);
     }
 }
 
 const DIST_TRAIN_FILENAME_TEMPLATE = { 
-    path_temp: `trains/{id}.html`,
+    pathTemp: `trains/{id}.html`,
     make: function(id) {
-        return this.path_temp.replace('{id}', id);
+        return this.pathTemp.replace('{id}', id);
     }
 }
 const DIST_TRAINS_FILENAME = 'trains.html';

@@ -15,6 +15,7 @@ const TEMPLATES = {
     trains: _readTemplate('trains.mustache'),
     train: _readTemplate('train.mustache'),
 
+    awardsBase: _readTemplate('awards/base.mustache'),
     awardsYears: _readTemplate('awards/years.mustache'),
     awardsBoss: _readTemplate('awards/boss.mustache'),
     awardsBook: _readTemplate('awards/book.mustache'),

@@ -1,18 +1,19 @@
 const { PERSONS_URL, TRAINS_URL, 
-        AWARDS_MAIN_URL, AWARDS_YEARS_URL, AWARDS_BOSS_URL, AWARDS_BOOK_URL } = require('../urls.js');
+        AWARDS_MAIN_URL, AWARDS_YEARS_URL, AWARDS_BOSS_URL, AWARDS_BOOK_URL,
+        IMAGE_URLS } = require('../urls.js');
 
 const HOME_URLS = [
     {
         pageUrl: PERSONS_URL,
-        imageUrl: './static/images/menu/persons.png',
+        imageUrl: IMAGE_URLS.personsIcon,
     },
     {
         pageUrl: TRAINS_URL,
-        imageUrl: './static/images/menu/trains.png',
+        imageUrl: IMAGE_URLS.trainsIcon,
     },
     {
         pageUrl: AWARDS_MAIN_URL,
-        imageUrl: './static/images/menu/awards.png',
+        imageUrl: IMAGE_URLS.awardsIcon,
     },
 ];
 
@@ -25,17 +26,17 @@ const AWARDS_PAGE_HEADINGS = [
 const AWARDS_MAIN_URLS = [
     {
         pageUrl: AWARDS_YEARS_URL,
-        imageUrl: './static/images/awards/sections/years.png',
+        imageUrl: IMAGE_URLS.awardsYearsIcon,
         pageHeading: AWARDS_PAGE_HEADINGS[0],
     },
     {
         pageUrl: AWARDS_BOSS_URL,
-        imageUrl: './static/images/awards/sections/boss.png',
+        imageUrl: IMAGE_URLS.awardsBossIcon,
         pageHeading: AWARDS_PAGE_HEADINGS[1],
     },
     {
         pageUrl: AWARDS_BOOK_URL,
-        imageUrl: './static/images/awards/sections/book.png',
+        imageUrl: IMAGE_URLS.awardsBookIcon,
         pageHeading: AWARDS_PAGE_HEADINGS[2],
     },
 ];
