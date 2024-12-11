@@ -8,7 +8,6 @@ const TEMPLATES = {
     wrapper: _readTemplate('wrapper.mustache'),
     mainLinks: _readTemplate('mainLinks.mustache'),
     withSidebar: _readTemplate('withSidebar.mustache'),
-    catalog: _readTemplate('catalog.mustache'),
 
     persons: _readTemplate('persons.mustache'),
     person: _readTemplate('person.mustache'),

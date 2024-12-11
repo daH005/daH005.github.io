@@ -1,23 +1,27 @@
-<a href="./index.html">Назад</a>
-<header class="main-gb-color d-flex parallax-container ">
+<header class="main-gb-color d-flex parallax-container">
+    
     <div class="overlay"></div>
+
     <div class="container d-flex flex-column justify-content-center align-items-center">
         <div class=" w-100 " style="z-index:50;">
+
+            {{#backUrl}}<a href="{{backUrl}}">Назад</a>{{/backUrl}}
+
             <div class="row">
                 <div class="col-12">
                     <h1 class="text-center">{{heading}}</h1>
                 </div>
             </div>
+
             <div class="row justify-content-around">
-
-                    {{#urls}}
-                    <a href="{{pageUrl}}" class="text-decoration-none col-3 text-white"><img
-                       src="{{imageUrl}}" class="w-100">
-                       {{pageHeading}}
-                    </a>
-                    {{/urls}}
-
+                {{#urls}}
+                <a href="{{pageUrl}}" class="text-decoration-none col-3 text-white"><img
+                   src="{{imageUrl}}" class="w-100">
+                   {{pageHeading}}
+                </a>
+                {{/urls}}
             </div>
+
         </div>
     </div>
 </header>

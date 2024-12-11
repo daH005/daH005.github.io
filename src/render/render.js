@@ -18,10 +18,11 @@ function renderHome() {
 function renderPersons(persons) {
     return _renderWrapper(
         'Книга почета',
-        _renderCatalog(
+        _renderWithSidebar(
             renderTemplate(TEMPLATES.persons, {
                 persons,
             }),
+            HOME_URL,
         ),
     );
 }
@@ -29,20 +30,12 @@ function renderPersons(persons) {
 function renderTrains(trains) {
     return _renderWrapper(
         'Дорога времени',
-        _renderCatalog(
+        _renderWithSidebar(
             renderTemplate(TEMPLATES.trains, {
                 trains,
             }),
-        ),
-    );
-}
-
-function _renderCatalog(contentBody) {
-    return _renderWithSidebar(
-        renderTemplate(TEMPLATES.catalog, {
-            contentBody,
             HOME_URL,
-        }),
+        ),
     );
 }
 
@@ -54,8 +47,8 @@ function renderPerson(person, personsLength) {
                 ...person,
                 prevId: person.id > 1 ? person.id - 1: null,
                 nextId: person.id < personsLength ? person.id + 1 : null,
-                PERSONS_URL,
             }),
+            PERSONS_URL,
         ),
     );
 }
@@ -68,8 +61,8 @@ function renderTrain(train, dataLength) {
                 ...train,
                 prevId: train.id > 1 ? train.id - 1: null,
                 nextId: train.id < dataLength ? train.id + 1 : null,
-                TRAINS_URL,
             }),
+            TRAINS_URL,
         ),
     );
 }
@@ -77,7 +70,7 @@ function renderTrain(train, dataLength) {
 function renderAwardsMain() {
     return _renderWrapper(
         'Награды',
-        _renderMainLinks('Награды', AWARDS_MAIN_URLS),
+        _renderMainLinks('Награды', AWARDS_MAIN_URLS, HOME_URL),
     );
 }
 
@@ -88,6 +81,7 @@ function renderAwardsYears() {
             renderTemplate(TEMPLATES.awardsYears, {
                 // ...
             }),
+            AWARDS_MAIN_URL,
         ),
     );
 }
@@ -99,6 +93,7 @@ function renderAwardsBoss() {
             renderTemplate(TEMPLATES.awardsBoss, {
                 // ...
             }),
+            AWARDS_MAIN_URL,
         ),
     );
 }
@@ -110,22 +105,25 @@ function renderAwardsBook() {
             renderTemplate(TEMPLATES.awardsBook, {
                 // ...
             }),
+            AWARDS_MAIN_URL,
         ),
     );
 }
 
-function _renderWithSidebar(content) {
+function _renderWithSidebar(content, backUrl) {
     return renderTemplate(TEMPLATES.withSidebar, {
         content,
+        backUrl,
         LOGO_IMAGE_URL,
         SIDEBAR_IMAGE_URL,
     });
 }
 
-function _renderMainLinks(heading, urls) {
+function _renderMainLinks(heading, urls, backUrl) {
     return renderTemplate(TEMPLATES.mainLinks, {
         heading,
         urls,
+        backUrl,
     });
 }
 
