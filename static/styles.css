@@ -17,8 +17,13 @@ body {
     margin-bottom: 20px;
 }
 
+#main__subtitles{
+    transition: 1s;
+}
+
 .main__links {
     align-items: center;
+    transition: 1s;
 }
 
 .main__links img {
