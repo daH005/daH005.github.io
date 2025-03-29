@@ -1,0 +1,37 @@
+{% extends 'wrappers/transition.html' %}
+
+{% block back_url %}
+{{ url_for('transitions_start') }}
+{% endblock %}
+
+{% block transitions %}
+<a class="transition" href="{{ url_for('tour_3d') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/tour_3d.png') }}">
+    <h3 class="transition__header">3D тур</h3>
+</a>
+
+<a class="transition" href="{{ url_for('respect_book_catalog') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/respect_book.png') }}">
+    <h3 class="transition__header">Книга почёта</h3>
+</a>
+
+<a class="transition" href="{{ url_for('memory_book_catalog') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/memory_book.png') }}">
+    <h3 class="transition__header">Книга памяти</h3>
+</a>
+
+<a class="transition" href="{{ url_for('trains_catalog') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/trains.png') }}">
+    <h3 class="transition__header">Дорога времени</h3>
+</a>
+
+<a class="transition" href="{{ url_for('transitions_awards') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/awards.png') }}">
+    <h3 class="transition__header">Награды</h3>
+</a>
+
+<a class="transition" href="{{ url_for('quiz') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/quiz.png') }}">
+    <h3 class="transition__header">Викторина</h3>
+</a>
+{% endblock %}

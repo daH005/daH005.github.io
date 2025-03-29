@@ -1,0 +1,37 @@
+{% extends 'wrappers/transition.html' %}
+
+{% block back_url %}
+{{ url_for('transitions_general') }}
+{% endblock %}
+
+{% block transitions %}
+<a class="transition" href="{{ url_for('awards_best_depo') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/awards/best_depo.png') }}">
+    <h3 class="transition__header">Лучшее сервисное локомотивное депо</h3>
+</a>
+
+<a class="transition" href="{{ url_for('awards_boss') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/awards/boss.png') }}">
+    <h3 class="transition__header">Руководитель сервисного локомотивного депо</h3>
+</a>
+
+<a class="transition" href="{{ url_for('awards_direction_book') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/awards/direction_book.png') }}">
+    <h3 class="transition__header">Книга «Дирекция тяги-локомотив 15 лет в пути»</h3>
+</a>
+
+<a class="transition" href="{{ url_for('awards_dynasties') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/awards/dynasties.png') }}">
+    <h3 class="transition__header">Династии</h3>
+</a>
+
+<a class="transition" href="{{ url_for('awards_ecology') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/awards/ecology.png') }}">
+    <h3 class="transition__header">Экология</h3>
+</a>
+
+<a class="transition" href="{{ url_for('awards_charity') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/awards/charity.png') }}">
+    <h3 class="transition__header">Благотворительность</h3>
+</a>
+{% endblock %}

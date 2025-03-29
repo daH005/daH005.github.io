@@ -1,0 +1,12 @@
+{% extends 'wrappers/with_sidebar.html' %}
+
+{% block page %}
+<div class="content__links">
+    {% for object in objects %}
+    <a href="{{ url_for(card_endpoint, object_id=object.id) }}">
+        <img src="{{ url_for('static', filename=object.image_path) }}">
+        <h2>{{ object.title }}</h2>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

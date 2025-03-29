@@ -1,0 +1,22 @@
+{% extends 'wrappers/base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/transitions.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="transitions-wrapper" style="background: url({{ url_for('static', filename='images/transitions/background.png') }});">
+    <div class="transitions">
+        <a class="transitions__back" href="{% block back_url %}{% endblock %}">
+            <i class="fa fa-caret-left" aria-hidden="true"></i>
+        </a>
+        <style>
+            .transitions__back[href=""] {
+                display: none;
+            }
+        </style>
+
+        {% block transitions %}{% endblock %}
+    </div>
+</div>
+{% endblock %}

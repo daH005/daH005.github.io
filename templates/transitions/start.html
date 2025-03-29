@@ -1,0 +1,8 @@
+{% extends 'wrappers/transition.html' %}
+
+{% block transitions %}
+<a class="transition" href="{{ url_for('transitions_general') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/start.png') }}">
+    <h3 class="transition__header">Войти в интерактивный музей</h3>
+</a>
+{% endblock %}

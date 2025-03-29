@@ -1,3 +1,6 @@
-*.pptx
-node_modules
-dist
+.idea
+__pycache__
+venv
+.env
+*.exe
+_build_cache

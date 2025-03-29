@@ -1,0 +1,27 @@
+{% extends 'wrappers/with_sidebar.html' %}
+
+{% block page %}
+<div class="content__card">
+    <img class="content__avatar" src="{{ url_for('static', filename=object.image_path) }}">
+    <div class="content__text">
+        <h1>
+            {{ object.title }}
+        </h1>
+        {{ object.content | safe }}
+
+        <span class="content__end">
+            {{ object.end }}
+        </span>
+
+    </div>
+</div>
+
+<div class="content__pagination">
+    <a href="{{ url_for(request.endpoint, object_id=prev_object_id) }}">
+        Назад
+    </a>
+    <a href="{{ url_for(request.endpoint, object_id=next_object_id) }}">
+        Вперёд
+    </a>
+</div>
+{% endblock %}

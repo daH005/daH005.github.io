@@ -1,0 +1,19 @@
+:root {
+    --main-color: #ed153e;
+    --main-2-color: #be3437;
+    --main-3-color: #E40134;
+}
+
+@font-face {
+    font-family: main;
+    src: url('../fonts/tahoma.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body, input, button, textarea {
+    font-family: main;
+}
