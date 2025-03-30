@@ -1,0 +1,66 @@
+.quiz {
+    width: fit-content;
+    margin: auto;
+}
+
+.quiz__buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz__move {
+    font-size: 80px;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.quiz__control {
+    font-size: 90px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.quiz__control.quiz__control--started .quiz__start {
+    display: none;
+}
+
+.quiz__control.quiz__control--started .quiz__stop {
+    display: block;
+}
+
+.quiz__start {
+}
+
+.quiz__stop {
+    display: none;
+}
+
+.quiz__videos {
+}
+
+video {
+    display: none;
+    margin: auto;
+    border-radius: 30px;
+}
+
+video.active {
+    display: block;
+}
+
+.quiz__steps {
+    margin-top: 10px;
+    display: flex;
+}
+
+.quiz__step {
+    height: 4px;
+    width: 100%;
+    margin-right: 20px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.quiz__step--active {
+    background: var(--main-color);
+}

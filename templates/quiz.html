@@ -1,0 +1,99 @@
+{% extends 'wrappers/with_sidebar.html' %}
+
+{% block css %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/quiz.css') }}">
+{% endblock %}
+
+{% block page %}
+<h1 align="center">Викторина от СЛД «Зауралье»</h1>
+
+<div class="quiz">
+    <div class="quiz__videos">
+        <video class="active">
+            <source src="{{ url_for('static', filename='videos/quiz/1.mov') }}" type="video/mp4">
+            12312
+        </video>
+
+        <video>
+            <source src="{{ url_for('static', filename='videos/quiz/2.mov') }}" type="video/mp4">
+        </video>
+
+        <video>
+            <source src="{{ url_for('static', filename='videos/quiz/3.mov') }}" type="video/mp4">
+        </video>
+
+        <video>
+            <source src="{{ url_for('static', filename='videos/quiz/4.mov') }}" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="quiz__buttons">
+        <div class="quiz__move" onclick="move(-1)">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </div>
+
+        <div class="quiz__control">
+            <div class="quiz__start" onclick="startCurrentVideo()">
+                <i class="fa fa-play-circle" aria-hidden="true"></i>
+            </div>
+            <div class="quiz__stop" onclick="stopCurrentVideo()">
+                <i class="fa fa-pause-circle" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="quiz__move" onclick="move(1)">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <div class="quiz__steps">
+        <div class="quiz__step quiz__step--active"></div>
+        <div class="quiz__step"></div>
+        <div class="quiz__step"></div>
+        <div class="quiz__step"></div>
+    </div>
+</div>
+
+<script>
+    const ACTIVE_VIDEO_CLASS = "active";
+    const ACTIVE_VIDEO_STEP_CLASS = "quiz__step--active";
+    const CONTROL_STARTED_CLASS = "quiz__control--started";
+
+    const control = document.querySelector(".quiz__control");
+    const videos = Array.from(document.querySelectorAll(".quiz__videos video"));
+    let currentVideoIndex = 0;
+    let videoCount = videos.length;
+
+    const steps = Array.from(document.querySelectorAll(".quiz__step"));
+
+    function move(direction) {
+        stopCurrentVideo();
+
+        for (let i in videos) {
+            videos[i].classList.remove(ACTIVE_VIDEO_CLASS);
+            steps[i].classList.remove(ACTIVE_VIDEO_STEP_CLASS);
+        }
+
+        currentVideoIndex += direction;
+        if (currentVideoIndex < 0) {
+            currentVideoIndex = videoCount - 1;
+        } else if (currentVideoIndex > videoCount - 1) {
+            currentVideoIndex = 0;
+        }
+        videos[currentVideoIndex].classList.add(ACTIVE_VIDEO_CLASS);
+        steps[currentVideoIndex].classList.add(ACTIVE_VIDEO_STEP_CLASS);
+    }
+
+    function startCurrentVideo() {
+        control.classList.add(CONTROL_STARTED_CLASS);
+        videos[currentVideoIndex].play();
+    }
+
+    function stopCurrentVideo() {
+        control.classList.remove(CONTROL_STARTED_CLASS);
+        videos[currentVideoIndex].pause();
+    }
+</script>
+
+{% endblock %}

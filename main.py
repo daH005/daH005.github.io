@@ -182,7 +182,10 @@ def awards_charity() -> str:
 
 @app.route('/quiz')
 def quiz() -> str:
-    pass
+    return render_template(
+        'quiz.html',
+        back_endpoint='transitions_general',
+    )
 
 
 if __name__ == '__main__':
