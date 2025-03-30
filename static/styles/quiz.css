@@ -7,16 +7,15 @@
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
+    font-size: 4vw;
 }
 
 .quiz__move {
-    font-size: 80px;
     cursor: pointer;
     color: var(--main-color);
 }
 
 .quiz__control {
-    font-size: 90px;
     color: var(--main-color);
     cursor: pointer;
 }
@@ -43,6 +42,7 @@ video {
     display: none;
     margin: auto;
     border-radius: 30px;
+    height: 60vh;
 }
 
 video.active {
