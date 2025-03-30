@@ -1,6 +1,6 @@
-const { PERSONS_URL, TRAINS_URL, 
-        AWARDS_MAIN_URL, AWARDS_YEARS_URL, AWARDS_BOSS_URL, AWARDS_BOOK_URL,
-        IMAGE_URLS } = require('../urls.js');
+const { PERSONS_URL, TRAINS_URL,
+    AWARDS_MAIN_URL, AWARDS_YEARS_URL, AWARDS_BOSS_URL, AWARDS_BOOK_URL, AWARDS_DYNASTY_URL, DYNASTY_ABSOLYAMOV_URL, DYNASTY_MYCHAILOV_URL,
+    IMAGE_URLS } = require('../urls.js');
 const { awardsYears } = require('../awardsYears.js');
 
 const HOME_URLS = [
@@ -22,7 +22,13 @@ const AWARDS_PAGE_HEADINGS = [
     'Лучшее сервисное локомотивное депо',
     'Руководитель сервисного локомотивного депо',
     'Книга «Дирекция тяги-локомотив 15 лет в пути»',
+    'Династии'
 ];
+
+const DYNASTY_PAGE_HEADINGS = [
+    'Династия Абсалямовых',
+    'Династия Михайловых'
+]
 
 const AWARDS_MAIN_URLS = [
     {
@@ -40,6 +46,24 @@ const AWARDS_MAIN_URLS = [
         imageUrl: IMAGE_URLS.awardsBookIcon,
         pageHeading: AWARDS_PAGE_HEADINGS[2],
     },
+    {
+        pageUrl: AWARDS_DYNASTY_URL,
+        imageUrl: IMAGE_URLS.awardsDynastyIcon,
+        pageHeading: AWARDS_PAGE_HEADINGS[3],
+    },
+];
+
+const DYNASTY_MAIN_URLS = [
+    {
+        pageUrl: DYNASTY_ABSOLYAMOV_URL,
+        imageUrl: IMAGE_URLS.dynastyAbsolyamovIcon,
+        pageHeading: DYNASTY_PAGE_HEADINGS[0],
+    },
+    {
+        pageUrl: DYNASTY_MYCHAILOV_URL,
+        imageUrl: IMAGE_URLS.dynastyMichailovIcon,
+        pageHeading: DYNASTY_PAGE_HEADINGS[1],
+    },
 ];
 
 const AWARDS_YEARS = awardsYears.map((year, index) => {
@@ -55,4 +79,7 @@ module.exports = {
     AWARDS_PAGE_HEADINGS,
     AWARDS_MAIN_URLS,
     AWARDS_YEARS,
+    DYNASTY_PAGE_HEADINGS,
+
+    DYNASTY_MAIN_URLS
 }

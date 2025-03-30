@@ -2,27 +2,29 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 const { persons, trains } = require('./data.js');
-const { renderHome, 
-        renderPersons, renderPerson, 
-        renderTrains, renderTrain,
-        renderAwardsMain, renderAwardsYears, renderAwardsBoss, renderAwardsBook } = require('./render/render.js');
+const { renderHome,
+    renderPersons, renderPerson,
+    renderTrains, renderTrain,
+    renderAwardsMain, renderAwardsYears, renderAwardsBoss, renderAwardsBook, renderAwardsDynasty,
+    renderAbsolyamovDynasty, renderMichailovDynasty } = require('./render/render.js');
 const { STATIC_PATH, DIST_PATH } = require('./paths.js');
-const { DIST_HOME_FILENAME, 
-        DIST_PERSONS_FILENAME, DIST_PERSON_FILENAME_TEMPLATE, 
-        DIST_TRAINS_FILENAME, DIST_TRAIN_FILENAME_TEMPLATE,
-        DIST_AWARDS_MAIN_FILENAME, DIST_AWARDS_YEARS_FILENAME, DIST_AWARDS_BOSS_FILENAME, DIST_AWARDS_BOOK_FILENAME,
-        DIST_STATIC_FOLDER } = require('./dist.js');
+const { DIST_HOME_FILENAME,
+    DIST_PERSONS_FILENAME, DIST_PERSON_FILENAME_TEMPLATE,
+    DIST_TRAINS_FILENAME, DIST_TRAIN_FILENAME_TEMPLATE,
+    DIST_AWARDS_MAIN_FILENAME, DIST_AWARDS_YEARS_FILENAME, DIST_AWARDS_BOSS_FILENAME, DIST_AWARDS_BOOK_FILENAME,
+    DIST_AWARDS_DYNASTY_FILENAME, DIST_DYNASTY_MYCHAILOV_FILENAME, DIST_DYNASTY_ABSOLYAMOV_FILENAME,
+    DIST_STATIC_FOLDER } = require('./dist.js');
 
 module.exports = {
     output: {
         filename: 'bundle.js',
         path: DIST_PATH.toString(),
     },
-    
+
     devServer: {
-        open: true,
+        open: false,
         hot: true,
-        watchFiles: __dirname
+        watchFiles: ["*"],
     },
     mode: 'development',
 
@@ -78,6 +80,18 @@ module.exports = {
         new HtmlWebpackPlugin({
             templateContent: renderAwardsBook(),
             filename: DIST_AWARDS_BOOK_FILENAME,
+        }),
+        new HtmlWebpackPlugin({
+            templateContent: renderAwardsDynasty(),
+            filename: DIST_AWARDS_DYNASTY_FILENAME,
+        }),
+        new HtmlWebpackPlugin({
+            templateContent: renderAbsolyamovDynasty(),
+            filename: DIST_DYNASTY_ABSOLYAMOV_FILENAME,
+        }),
+        new HtmlWebpackPlugin({
+            templateContent: renderMichailovDynasty(),
+            filename: DIST_DYNASTY_MYCHAILOV_FILENAME,
         }),
 
     ],

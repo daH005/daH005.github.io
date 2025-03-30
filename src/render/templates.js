@@ -19,6 +19,9 @@ const TEMPLATES = {
     awardsYears: _readTemplate('awards/years.mustache'),
     awardsBoss: _readTemplate('awards/boss.mustache'),
     awardsBook: _readTemplate('awards/book.mustache'),
+
+    dynastyAbsolyamov: _readTemplate('awards/dynasties/absolyamov.mustache'),
+    dynastyMichailov: _readTemplate('awards/dynasties/michailov.mustache'),
 }
 
 module.exports = {

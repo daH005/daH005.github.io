@@ -6,7 +6,7 @@ const { HOME_URL,
         STYLE_URLS, SCRIPT_URLS, 
         IMAGE_URLS } = require('../urls.js');
 const { HOME_URLS, 
-        AWARDS_PAGE_HEADINGS, AWARDS_MAIN_URLS, AWARDS_YEARS } = require('./params.js');
+        AWARDS_PAGE_HEADINGS, AWARDS_MAIN_URLS, AWARDS_YEARS, DYNASTY_MAIN_URLS, DYNASTY_PAGE_HEADINGS } = require('./params.js');
 const { TEMPLATES } = require('./templates.js');
 
 function renderHome() {
@@ -103,6 +103,31 @@ function renderAwardsBook() {
         }),
     );
 }
+function renderAwardsDynasty() {
+    return _renderWrapper(
+        'Династии',
+        _renderMainLinks('Династии', DYNASTY_MAIN_URLS, HOME_URL),
+    );
+}
+
+function renderAbsolyamovDynasty() {
+    return _renderAwardsBase(
+        DYNASTY_PAGE_HEADINGS[0], 
+        renderTemplate(TEMPLATES.dynastyAbsolyamov, {
+            images: IMAGE_URLS.dynastyAbsolyamov,
+            // PAPER_IMAGE_URL: IMAGE_URLS.awardsBookPaper,
+        }),
+    );
+}
+function renderMichailovDynasty() {
+    return _renderAwardsBase(
+        DYNASTY_PAGE_HEADINGS[1], 
+        renderTemplate(TEMPLATES.dynastyMichailov, {
+            images: IMAGE_URLS.dynastyMichailov,
+
+        }),
+    );
+}
 
 function _renderAwardsBase(heading, content) {
     return _renderWrapper(
@@ -156,4 +181,7 @@ module.exports = {
     renderAwardsYears,
     renderAwardsBoss,
     renderAwardsBook,
+    renderAwardsDynasty,
+    renderMichailovDynasty,
+    renderAbsolyamovDynasty,
 }

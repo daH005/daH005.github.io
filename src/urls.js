@@ -2,11 +2,15 @@ const { DIST_HOME_FILENAME,
         DIST_PERSONS_FILENAME, DIST_PERSON_FILENAME_TEMPLATE, 
         DIST_TRAINS_FILENAME, DIST_TRAIN_FILENAME_TEMPLATE, 
         DIST_AWARDS_MAIN_FILENAME, DIST_AWARDS_YEARS_FILENAME, DIST_AWARDS_BOSS_FILENAME, DIST_AWARDS_BOOK_FILENAME,
+        DIST_AWARDS_DYNASTY_FILENAME, DIST_DYNASTY_MYCHAILOV_FILENAME, DIST_DYNASTY_ABSOLYAMOV_FILENAME,
         DIST_STATIC_FOLDER } = require('./dist.js');
 const { DIST_PATH } = require('./paths.js');
 const { awardsYears } = require('./awardsYears.js');
 
-const BASE_URL = DIST_PATH.toString() + '/';
+
+// const BASE_URL = DIST_PATH.toString() + '/';
+const BASE_URL = '/';
+
 
 const HOME_URL = BASE_URL + DIST_HOME_FILENAME;
 const PERSONS_URL = BASE_URL + DIST_PERSONS_FILENAME;
@@ -24,6 +28,10 @@ const AWARDS_MAIN_URL = BASE_URL + DIST_AWARDS_MAIN_FILENAME;
 const AWARDS_YEARS_URL = BASE_URL + DIST_AWARDS_YEARS_FILENAME;
 const AWARDS_BOSS_URL = BASE_URL + DIST_AWARDS_BOSS_FILENAME;
 const AWARDS_BOOK_URL = BASE_URL + DIST_AWARDS_BOOK_FILENAME;
+const AWARDS_DYNASTY_URL = BASE_URL + DIST_AWARDS_DYNASTY_FILENAME;
+
+DYNASTY_ABSOLYAMOV_URL = BASE_URL + DIST_DYNASTY_ABSOLYAMOV_FILENAME
+DYNASTY_MYCHAILOV_URL = BASE_URL + DIST_DYNASTY_MYCHAILOV_FILENAME
 
 const STYLE_URLS = [
     BASE_URL + DIST_STATIC_FOLDER + '/styles.css',
@@ -59,6 +67,23 @@ const IMAGE_URLS = {
     awardsYearsIcon: _IMAGES_BASE_URL + '/awards/sections/years.png',
     awardsBossIcon: _IMAGES_BASE_URL + '/awards/sections/boss.png',
     awardsBookIcon: _IMAGES_BASE_URL + '/awards/sections/book.png',
+    awardsDynastyIcon: _IMAGES_BASE_URL + '/awards/sections/tree.png',
+
+    dynastyAbsolyamovIcon: _IMAGES_BASE_URL + '/awards/dynasty/absolyamov.JPG',
+    dynastyMichailovIcon: _IMAGES_BASE_URL + '/awards/dynasty/mychailov.JPG',
+
+    dynastyAbsolyamov: [
+        _IMAGES_BASE_URL + '/awards/dynasty/absolyamov/1.JPG',
+        _IMAGES_BASE_URL + '/awards/dynasty/absolyamov/2.JPG',
+        _IMAGES_BASE_URL + '/awards/dynasty/absolyamov/3.JPG',
+    ],
+
+    dynastyMichailov: [
+        _IMAGES_BASE_URL + '/awards/dynasty/michailov/1.JPG',
+        _IMAGES_BASE_URL + '/awards/dynasty/michailov/2.JPG',
+        _IMAGES_BASE_URL + '/awards/dynasty/michailov/3.JPG',
+        _IMAGES_BASE_URL + '/awards/dynasty/michailov/4.JPG',
+    ],
 
     awardsYears: awardsYears.map(year => {
         return _IMAGES_BASE_URL + '/awards/years/' + year + '.png'; 
@@ -84,6 +109,9 @@ module.exports = {
     AWARDS_YEARS_URL,
     AWARDS_BOSS_URL,
     AWARDS_BOOK_URL,
+    AWARDS_DYNASTY_URL,
+    DYNASTY_ABSOLYAMOV_URL,
+    DYNASTY_MYCHAILOV_URL,
 
     STYLE_URLS,
     SCRIPT_URLS,
