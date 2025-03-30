@@ -1,0 +1,59 @@
+{% extends 'wrappers/with_sidebar.html' %}
+
+{% block css %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/tabs.css') }}">
+{% endblock %}
+
+{% block js %}
+<script>
+    const ACTIVE_TAB_LINK_CLASS = "tab-link--active";
+    const ACTIVE_TAB_PAGE_CLASS = "tab-page--active";
+
+    const tabLinks = Array.from(document.querySelectorAll(".tab-link"));
+    const tabPages = Array.from(document.querySelectorAll(".tab-page"));
+
+    tabLinks.forEach((link, i) => {
+        link.onclick = () => {
+            openTab(i);
+        }
+    });
+
+    function openTab(i) {
+        for (let k in tabLinks) {
+            tabLinks[k].classList.remove(ACTIVE_TAB_LINK_CLASS);
+            tabPages[k].classList.remove(ACTIVE_TAB_PAGE_CLASS);
+        }
+
+        tabLinks[i].classList.add(ACTIVE_TAB_LINK_CLASS);
+        tabPages[i].classList.add(ACTIVE_TAB_PAGE_CLASS);
+    }
+
+    openTab(0);
+</script>
+
+<script>
+    const ACTIVE_IMAGE_VIEWER_LINK = "active";
+
+    document.querySelectorAll(".image-viewer").forEach((viewer) => {
+        const links = viewer.querySelectorAll(".image-viewer__links img");
+        const currentImage = viewer.querySelector(".image-viewer__current-image");
+        links.forEach((link) => {
+            link.onclick = () => {
+                openImage(link);
+            }
+        });
+
+        function openImage(link) {
+            for (let anotherLink of links) {
+                anotherLink.classList.remove(ACTIVE_IMAGE_VIEWER_LINK);
+            }
+            link.classList.add(ACTIVE_IMAGE_VIEWER_LINK);
+            currentImage.src = link.src;
+        }
+
+        openImage(links[0]);
+    });
+
+</script>
+{% endblock %}

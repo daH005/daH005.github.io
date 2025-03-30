@@ -1,0 +1,15 @@
+{% extends 'wrappers/transition.html' %}
+
+{% block transitions %}
+<a class="transition" href="{{ url_for('charity_2022') }}">
+    <h3 class="transition__header transition__header--alone">2022</h3>
+</a>
+
+<a class="transition" href="{{ url_for('charity_2023') }}">
+    <h3 class="transition__header transition__header--alone">2023</h3>
+</a>
+
+<a class="transition" href="{{ url_for('charity_2024') }}">
+    <h3 class="transition__header transition__header--alone">2024</h3>
+</a>
+{% endblock %}

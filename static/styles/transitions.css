@@ -63,3 +63,9 @@
     text-align: center;
     font-weight: 300;
 }
+
+.transition__header--alone {
+    padding-top: 0;
+    font-size: 50px;
+    margin: 20px;
+}

@@ -29,7 +29,7 @@ def transitions_general() -> str:
 
 @app.route('/tour_3d')
 def tour_3d() -> str:
-    pass
+    return 'В разработке.'
 
 
 @app.route('/respect_book')
@@ -170,14 +170,68 @@ def dynasties_michailov() -> str:
     )
 
 
-@app.route('/awards/ecology')
-def awards_ecology() -> str:
-    pass
+@app.route('/transitions/ecology')
+def transitions_ecology() -> str:
+    return render_template(
+        'transitions/ecology.html',
+        back_endpoint='transitions_awards',
+    )
 
 
-@app.route('/awards/charity')
-def awards_charity() -> str:
-    pass
+@app.route('/ecology/2022')
+def ecology_2022() -> str:
+    return render_template(
+        'ecology/2022.html',
+        back_endpoint='transitions_ecology',
+    )
+
+
+@app.route('/ecology/2023')
+def ecology_2023() -> str:
+    return render_template(
+        'ecology/2023.html',
+        back_endpoint='transitions_ecology',
+    )
+
+
+@app.route('/ecology/2024')
+def ecology_2024() -> str:
+    return render_template(
+        'ecology/2024.html',
+        back_endpoint='transitions_ecology',
+    )
+
+
+@app.route('/transitions/charity')
+def transitions_charity() -> str:
+    return render_template(
+        'transitions/charity.html',
+        back_endpoint='transitions_awards',
+    )
+
+
+@app.route('/charity/2022')
+def charity_2022() -> str:
+    return render_template(
+        'charity/2022.html',
+        back_endpoint='transitions_charity',
+    )
+
+
+@app.route('/charity/2023')
+def charity_2023() -> str:
+    return render_template(
+        'charity/2023.html',
+        back_endpoint='transitions_charity',
+    )
+
+
+@app.route('/charity/2024')
+def charity_2024() -> str:
+    return render_template(
+        'charity/2024.html',
+        back_endpoint='transitions_charity',
+    )
 
 
 @app.route('/quiz')

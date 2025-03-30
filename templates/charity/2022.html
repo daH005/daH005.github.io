@@ -1,0 +1,85 @@
+{% extends 'wrappers/tabs.html' %}
+
+{% block page %}
+<div class="tab-links">
+    <div class="tab-link">Добровольчество 02.09.2022</div>
+    <div class="tab-link">Новогодняя сказка в детском доме 28.12.2022</div>
+    <div class="tab-link">Экскурсия для воспитанников детского дома 01.11.2022</div>
+</div>
+
+<div class="tab-pages">
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2022/goodwill/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/goodwill/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/goodwill/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/goodwill/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/goodwill/5.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>2 сентября 2022</small>
+        <h3>Добровольчество</h3>
+        <p>На текущей неделе активисты молодежной ячейки депо «Зауралье» посетили Введенский филиал Центра помощи детям, оставшимся без попечения родителей.</p>
+        <p>В прошлом году закрыли Дом малютки в городе и было решено помогать другому детскому дому.</p>
+        <p>В октябре планируется ремонт и внутренняя отделка помещений силами работников молодежной ячейки.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2022/new_year_fairy/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/new_year_fairy/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/new_year_fairy/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/new_year_fairy/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/new_year_fairy/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/new_year_fairy/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/new_year_fairy/7.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>28 декабря 2022</small>
+        <h3>Новогодняя сказка в детском доме</h3>
+
+        <p>Активисты молодежной ячейки депо в очередной раз посетили Введенский детский дом.</p>
+        <p>Прошло чуть больше полутора месяцев с момента посещения работниками нашего депо детей-сирот и детей, оставшихся без попечения родителей. Как и было запланировано, ребята пригласили наших сотрудников на новогоднюю постановку.</p>
+        <p>Не обошлось и без Новогодних подарков!</p>
+        <p>Из числа воспитанников филиала были выбраны лучшие актеры, которых отметили специальными призами</p>
+        <p>Ребята в свою очередь подарили деповчанам подарок, сделанный своими руками!</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2022/excursion/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/excursion/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/excursion/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/excursion/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/excursion/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/excursion/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/excursion/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/excursion/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2022/excursion/9.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>1 ноября 2022</small>
+        <h3>Экскурсия для воспитанников детского дома</h3>
+        <p>Впервые у нас побывали 14 воспитанников из Курганского и Введенского филиала ГБУ для детей-сирот и детей, оставшихся без попечения родителей.</p>
+        <p>Встреча прошла в рамках проекта социальных инициатив «Тепло наших рук», реализуемого в депо.</p>
+        <p>Заместитель начальника депо по работе с персоналом Константин Шушарин провел для ребят экскурсию по территории депо и познакомил с производственным процессом ремонта локомотивов.</p>
+        <p>Представители молодежи организовали для воспитанников центра чаепитие и рассказали о деятельности молодежной ячейки.</p>
+        <p>Начальник депо Сергей Белоногов обратился к юным гостям и рассказал о перспективах работы в нашем предприятии.</p>
+
+    </div>
+</div>
+{% endblock %}

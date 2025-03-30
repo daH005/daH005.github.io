@@ -1,0 +1,63 @@
+.tab-links {
+    display: flex;
+}
+
+.tab-link {
+    padding: 20px;
+    cursor: pointer;
+    background: var(--main-color);
+    color: white;
+    margin-right: 5px;
+}
+
+.tab-link--active {
+    background: white;
+    color: black;
+    cursor: default;
+}
+
+.tab-pages {
+}
+
+.tab-page {
+    display: none;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.tab-page--active {
+    display: block;
+}
+
+.image-viewer {
+    display: flex;
+    height: 500px;
+    margin: 10px;
+}
+
+.image-viewer__links {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.image-viewer__links img {
+    margin-top: -5px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+    opacity: 0.5;
+}
+
+.image-viewer__links img.active {
+    opacity: 1;
+    cursor: default;
+}
+
+.image-viewer__current-image {
+    object-fit: cover;
+    width: 70%;
+    height: 100%;
+}
