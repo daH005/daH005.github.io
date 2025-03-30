@@ -5,7 +5,6 @@ __all__ = (
     'alive_employees',
     'dead_employees',
     'trains',
-    'award_best_depo_years',
 )
 
 
@@ -16,4 +15,3 @@ def _load(filename: str):
 alive_employees = _load('alive_employees.json')
 dead_employees = _load('dead_employees.json')
 trains = _load('trains.json')
-award_best_depo_years = _load('award_best_depo_years.json')

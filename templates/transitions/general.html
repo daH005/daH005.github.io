@@ -1,9 +1,5 @@
 {% extends 'wrappers/transition.html' %}
 
-{% block back_url %}
-{{ url_for('transitions_start') }}
-{% endblock %}
-
 {% block transitions %}
 <a class="transition" href="{{ url_for('tour_3d') }}">
     <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/tour_3d.png') }}">

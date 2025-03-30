@@ -1,9 +1,5 @@
 {% extends 'wrappers/transition.html' %}
 
-{% block back_url %}
-{{ url_for('transitions_general') }}
-{% endblock %}
-
 {% block transitions %}
 <a class="transition" href="{{ url_for('awards_best_depo') }}">
     <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/awards/best_depo.png') }}">
@@ -20,7 +16,7 @@
     <h3 class="transition__header">Книга «Дирекция тяги-локомотив 15 лет в пути»</h3>
 </a>
 
-<a class="transition" href="{{ url_for('awards_dynasties') }}">
+<a class="transition" href="{{ url_for('transitions_dynasties') }}">
     <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/awards/dynasties.png') }}">
     <h3 class="transition__header">Династии</h3>
 </a>

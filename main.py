@@ -7,7 +7,7 @@ from flask import (
 )
 
 from config import Config
-from data import alive_employees, dead_employees, trains, award_best_depo_years
+from data import alive_employees, dead_employees, trains
 from functions import take_before, take_after
 
 app: Flask = Flask(__name__)
@@ -21,7 +21,10 @@ def transitions_start() -> str:
 
 @app.route('/transitions/general')
 def transitions_general() -> str:
-    return render_template('transitions/general.html')
+    return render_template(
+        'transitions/general.html',
+        back_endpoint='transitions_start',
+    )
 
 
 @app.route('/tour_3d')
@@ -113,7 +116,10 @@ def _card(object_id: str,
 
 @app.route('/transitions/awards')
 def transitions_awards() -> str:
-    return render_template('transitions/awards.html')
+    return render_template(
+        'transitions/awards.html',
+        back_endpoint='transitions_general',
+    )
 
 
 @app.route('/awards/best_depo')
@@ -121,7 +127,6 @@ def awards_best_depo() -> str:
     return render_template(
         'awards/best_depo.html',
         back_endpoint='transitions_awards',
-        years=award_best_depo_years,
     )
 
 
@@ -141,9 +146,28 @@ def awards_direction_book() -> str:
     )
 
 
-@app.route('/awards/dynasties')
-def awards_dynasties() -> str:
-    pass
+@app.route('/transitions/dynasties')
+def transitions_dynasties() -> str:
+    return render_template(
+        'transitions/dynasties.html',
+        back_endpoint='transitions_awards',
+    )
+
+
+@app.route('/dynasties/absolyamov')
+def dynasties_absolyamov() -> str:
+    return render_template(
+        'dynasties/absolyamov.html',
+        back_endpoint='transitions_dynasties',
+    )
+
+
+@app.route('/dynasties/michailov')
+def dynasties_michailov() -> str:
+    return render_template(
+        'dynasties/michailov.html',
+        back_endpoint='transitions_dynasties',
+    )
 
 
 @app.route('/awards/ecology')

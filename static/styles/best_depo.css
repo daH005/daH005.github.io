@@ -1,5 +1,10 @@
+h2 {
+    text-align: center;
+}
+
 .years {
     display: flex;
+    justify-content: center;
 }
 
 .year a {
@@ -44,4 +49,5 @@
     background: white;
     padding: 3px 20px;
     opacity: 0.7;
+    cursor: pointer;
 }

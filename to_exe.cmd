@@ -4,5 +4,5 @@ pyinstaller main.py --onefile ^
                     --workpath ./_build_cache ^
                     --add-data "../templates;templates" ^
                     --add-data "../static;static" ^
-                    --icon=../static/images/transitions/background.png ^
+                    --icon=../static/images/logo_exe.png ^
                     --name=SinaraSite

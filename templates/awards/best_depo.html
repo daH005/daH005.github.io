@@ -29,19 +29,84 @@
 			}
 		</script>
 
-		{% for record in years %}
 		<div class="year">
-			<a onclick="showYearCard(this)">{{ record.year }} год</a>
+			<a onclick="showYearCard(this)">2017 год</a>
 
 			<div class="year__card">
 				<div class="year__card__relative">
-					<button onclick="hideYearCard(this)">Закрыть</button>
-					<img src="{{ url_for('static', filename=record.image_path) }}">
+					<button onclick="hideYearCard(this)">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</button>
+					<img src="{{ url_for('static', filename='images/awards/best_depo/2017.png') }}">
 				</div>
 			</div>
-
 		</div>
-		{% endfor %}
+
+		<div class="year">
+			<a onclick="showYearCard(this)">2018 год</a>
+
+			<div class="year__card">
+				<div class="year__card__relative">
+					<button onclick="hideYearCard(this)">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</button>
+					<img src="{{ url_for('static', filename='images/awards/best_depo/2018.png') }}">
+				</div>
+			</div>
+		</div>
+
+		<div class="year">
+			<a onclick="showYearCard(this)">2019 год</a>
+
+			<div class="year__card">
+				<div class="year__card__relative">
+					<button onclick="hideYearCard(this)">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</button>
+					<img src="{{ url_for('static', filename='images/awards/best_depo/2019.png') }}">
+				</div>
+			</div>
+		</div>
+
+		<div class="year">
+			<a onclick="showYearCard(this)">2020 год</a>
+
+			<div class="year__card">
+				<div class="year__card__relative">
+					<button onclick="hideYearCard(this)">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</button>
+					<img src="{{ url_for('static', filename='images/awards/best_depo/2020.png') }}">
+				</div>
+			</div>
+		</div>
+
+		<div class="year">
+			<a onclick="showYearCard(this)">2022 год</a>
+
+			<div class="year__card">
+				<div class="year__card__relative">
+					<button onclick="hideYearCard(this)">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</button>
+					<img src="{{ url_for('static', filename='images/awards/best_depo/2022.png') }}">
+				</div>
+			</div>
+		</div>
+
+		<div class="year">
+			<a onclick="showYearCard(this)">2023 год</a>
+
+			<div class="year__card">
+				<div class="year__card__relative">
+					<button onclick="hideYearCard(this)">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</button>
+					<img src="{{ url_for('static', filename='images/awards/best_depo/2023.png') }}">
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 {% endblock %}

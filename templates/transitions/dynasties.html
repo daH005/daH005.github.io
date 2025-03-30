@@ -1,0 +1,13 @@
+{% extends 'wrappers/transition.html' %}
+
+{% block transitions %}
+<a class="transition" href="{{ url_for('dynasties_absolyamov') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/dynasties/absolyamov.png') }}">
+    <h3 class="transition__header">Династия Абсалямовых</h3>
+</a>
+
+<a class="transition" href="{{ url_for('dynasties_michailov') }}">
+    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/dynasties/michailov.png') }}">
+    <h3 class="transition__header">Династия Михайловых</h3>
+</a>
+{% endblock %}
