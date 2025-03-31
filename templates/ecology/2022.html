@@ -1,4 +1,78 @@
-{% extends 'wrappers/with_sidebar.html' %}
+{% extends 'wrappers/tabs.html' %}
 
 {% block page %}
+<div class="tab-links">
+    <div class="tab-link">Благоустройство территории</div>
+    <div class="tab-link">Акция "Сохраним лес"</div>
+</div>
+
+<div class="tab-pages">
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/9.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/10.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/11.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/12.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/13.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/14.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/territory/15.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <h3>Благоустройство территории депо</h3>
+        <p>В сервисном локомотивном депо Зауралье реализовано ещё одно мероприятие молодежной политики - оформлена
+            клумба многолетними растениями.</p>
+        <p>Высажены такие цветы и кустарники как пузыреплодник, можжевельник, спирея, гортензия и другие.</p>
+        <p>Следует набраться терпения пока растения примут необходимую форму. Многолетникам требуется больше времени,
+            чтобы окрепнуть и начать цвести. Нужно быть готовым, что в первые сезоны они будут набирать силу.</p>
+        <p>В будущем многолетники станут основой клумбы, которую можно дополнять и наполнять однолетниками.</p>
+        
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/ecology/2022/save_forest/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/save_forest/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/save_forest/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/save_forest/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/save_forest/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/save_forest/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/save_forest/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/save_forest/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/save_forest/9.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2022/save_forest/10.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <h3>Сохраним лес - ежегодная Всероссийская акция по восстановлению лесов.</h3>
+        <p>Наступила осень, а это значит, что стартовал четвертый сезон Всероссийской акции «Сохраним лес»!</p>
+        <p>Порядка 80 человек, среди которых студенты Курганского железнодорожного института, представители ОАО «РЖД» и
+            ООО «СТМ-Сервис» высадили 20 тысяч саженцев сосны в Курганском лесничестве (Чаусовский участок). Теперь на
+            территории 4 гектар здесь будет расти молодой ельник.</p>
+        <p>"Такие масштабные лесовосстановительные акции позволяют компенсировать потери от лесных пожаров", -
+            рассказала эколог депо Дарья Григорьева.</p>
+        <p>Впервые всероссийскую акцию «Сохраним лес» провели в 2019 году. За три года к ней присоединились 2,5 млн
+            участников, которые высадили более 150 млн деревьев.</p>
+
+        #начниэкологиюссебя
+        <br>
+        #сохранимлес
+
+    </div>
+
+</div>
 {% endblock %}

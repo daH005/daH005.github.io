@@ -1,4 +1,170 @@
-{% extends 'wrappers/with_sidebar.html' %}
+{% extends 'wrappers/tabs.html' %}
 
 {% block page %}
+<div class="tab-links">
+    <div class="tab-link">"День эколога"</div>
+    <div class="tab-link">"День экологического образования"</div>
+    <div class="tab-link">"Зеленая Россия"</div>
+    <div class="tab-link">Акция "Сохраним лес"</div>
+</div>
+
+<div class="tab-pages">
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/9.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/10.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/11.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/12.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/13.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/14.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/15.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/16.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecolog_day/17.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <h3>5 июня — День эколога и Всемирный день окружающей среды!</h3>
+        <p>Всемирный день окружающей среды, или День эколога, отмечается практически во всех европейских странах. Этот
+            праздник был установлен 15 декабря 1972 года по инициативе Генеральной Ассамблеи ООН, чтобы «обратить
+            внимание
+            общественности на необходимость сохранять и улучшать окружающую среду».</p>
+        <p>День эколога — профессиональный праздник всех, кто специализируется на охране окружающей среды. К ним
+            относятся
+            не только госслужащие, сотрудники заповедников и штатные экологи предприятий, но и неравнодушные к этой
+            сфере
+            активисты.</p>
+        <p>Так ко дню охраны окружающей среды активисты СЛД Зауралье приняли участие в общегородской акции по
+            раздельному
+            сбору отходов, где были сданы батарейки, собранные работниками депо, и другое вторсырье.</p>
+        <p>А также проведено дополнительное озеленение клумбы, оформленной осенью.</p>
+        <p>С праздником всех причастных!</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecology_edu_day/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecology_edu_day/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecology_edu_day/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/ecology_edu_day/4.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <h3>День экологического образования</h3>
+        <p>Сегодня в России отмечается День экологического образования.</p>
+        <p>Идея праздника – популяризация экологических знаний во всех науках и всех областях жизнедеятельности.</p>
+        <p>12 мая традиционно по всей стране проходят экологические акции, выставки, семинары и конференции, посвященные
+            актуализации действий в защиту природы. Важная миссия эко-просвещения на благо окружающей среды – прививание
+            эко-привычек.</p>
+        <p>В связи с данным событием, в СЛД Зауралье эколог Дарья Григорьева провела для работников депо мастер-класс
+            «Раздельный сбор отходов - мой выбор!».</p>
+        <p>"На мастер-классе узнали какой бывает мусор, с чего начать сортировку отходов дома, для чего это нужно, как
+            правильно подготовить отходы и куда их сдавать", - поделилась впечатлениями председатель молодежной ячейки
+            депо
+            Белоногова Екатерина.</p>
+
+        #СТМ_Сервис #СТМ_Сервис_эко
+        <br>
+        #экологическоеобразование
+        <br>
+        #экологопросветительскоезанятие
+        <br>
+        #Зеленаявесна
+        <br>
+        #Зеленаявесна2023
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/ecology/2023/green_russia/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/green_russia/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/green_russia/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/green_russia/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/green_russia/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/green_russia/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/green_russia/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/green_russia/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/green_russia/9.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <h3>Акция "Зеленая Россия"</h3>
+        <p>22 сентября прошел Всероссийский экологический субботник «Зеленая Россия».</p>
+        <p>Представители молодежной ячейки СЛД Зауралье приняли участие в очистке лесов от мусора на территории лесного
+            фонда Курганского лесничества в Кетовском округе вблизи автодороги Курган — Половинное.</p>
+        <p>В акции также приняли участие представители крупных Курганских организаций и обычные граждане, всего порядка
+            250
+            человек, которым предстояло очистить от мусора территорию более 60 гектар.</p>
+        <p>"Собрано более 100 куб.м. мусора. Среди мусора были найдены ключи, старые фотографии, детские сланцы, метры
+            упаковочной пленки и конечно же несчетное количество пластиковых и стеклянных бутылок", - отметила Дарья
+            Григорьева, эколог депо.</p>
+        <p>Цель проекта: объединение всех граждан общей идеей сбережения природы. Возрождение родных традиций.
+            Экологическое и патриотическое воспитание.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/9.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/10.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/11.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/12.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/13.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/14.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/15.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/16.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/17.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/18.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/19.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/20.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/21.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/22.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2023/save_forest/23.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <h3>Участие в акции "Сохраним лес"</h3>
+        <p>Всероссийская лесовосстановительная акция прошла в городе Кургане.</p>
+        <p>Активисты молодежной ячейки СЛД Зауралье Григорьева Дарья, Безельт Павел и Дерхо Елена приняли участие в
+            ежегодной Всероссийской акции по восстановлению лесов - «Сохраним лес».</p>
+        <p>В полосе отвода железной дороги на перегоне Введенское - Логовушка участники акции внесли свой вклад, высадив
+            2680 саженцев деревьев (яблони, липы, березы) с целью восстановление лесонасаждений, пострадавших в
+            результате
+            пожаров в апреле-мае 2023 года и создания снегозащитной лесополосы.</p>
+        <p>Цель акции 2023 года — высадить в стране
+            70 000 000 деревьев.</p>
+        <p>Спасибо, что решили внести свой вклад в спасение лесов России!</p>
+
+    </div>
+
+</div>
 {% endblock %}

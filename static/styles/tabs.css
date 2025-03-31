@@ -1,5 +1,6 @@
 .tab-links {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .tab-link {
@@ -8,6 +9,7 @@
     background: var(--main-color);
     color: white;
     margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .tab-link--active {
@@ -22,7 +24,6 @@
 .tab-page {
     display: none;
     overflow-y: auto;
-    max-height: 80vh;
 }
 
 .tab-page--active {

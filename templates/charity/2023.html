@@ -1,4 +1,300 @@
-{% extends 'wrappers/with_sidebar.html' %}
+{% extends 'wrappers/tabs.html' %}
 
 {% block page %}
+<div class="tab-links">
+    <div class="tab-link">Весна идёт - весна в дорогу! 27.02.2023</div>
+    <div class="tab-link">Дарим радость детям 15.10.2023</div>
+    <div class="tab-link">День защиты детей в детском доме 01.06.2023</div>
+    <div class="tab-link">День России в детском доме 13.07.2023</div>
+    <div class="tab-link">Детям о железной дороге 31.03.2023</div>
+    <div class="tab-link">Новогодний праздник в детском доме 28.12.2023</div>
+    <div class="tab-link">Популяризация спорта и ЗОЖ 18.01.2023</div>
+    <div class="tab-link">Приготовление к празднику Светлой Пасхи 15.04.2023</div>
+    <div class="tab-link">Проект Тепло наших рук в детском доме 26.05.2023</div>
+    <div class="tab-link">Футбольные баталии в детском доме 06.02.2023</div>
+</div>
+
+<div class="tab-pages">
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2023/spring_go/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/spring_go/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/spring_go/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/spring_go/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/spring_go/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/spring_go/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/spring_go/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/spring_go/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/spring_go/9.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>27.02.2023</small>
+        <h3>Весна идёт - весне дорогу!</h3>
+        <p>Заключительный день масленичных торжеств – «прощеное воскресенье», когда следовало попросить у родных, друзей
+            и знакомых прощения за причинённые обиды. После этого происходили проводы Масленицы, с весёлыми плясками и
+            песнями.</p>
+        <p>А активистам Совета молодежи сервисного депо посчастливилось побывать на празднике проводов зимы в Введенском
+            филиале Центра помощи детям №1.</p>
+        <p>От прихожан храма Покрова пресвятой Богородицы города Кургана ребята передали в Центр изделия ручной работы,
+            детскую Библию и намоленую икону Владимирской Божьей матери.</p>
+        <p>Праздник удался! Масленица подошла к концу, теперь все готово к весне, полному обновлению и Великому
+            посту.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2023/children_joy/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/children_joy/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/children_joy/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/children_joy/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/children_joy/5.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>15.10.2023</small>
+        <h3>Дарим радость детям</h3>
+        <p>Активисты молодёжной ячейки сервисного депо "Зауралье" в очередной раз навестили воспитанников Введенского
+            филиала Центра помощи детям №1.</p>
+        <p>Погода не помешала - ребята поиграли в футбол, покушали вкусные фрукты и сосиски на природе, а в завершении
+            душевно поговорили и наметили планы на новогодние праздники.</p>
+        <p>Встреча прошла в рамках социального проекта "Добро наших сердец", реализуемого в |Сервисном локомотивном депо
+            Зауралье.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2023/protection_day/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/protection_day/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/protection_day/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/protection_day/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/protection_day/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/protection_day/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/protection_day/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/protection_day/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/protection_day/9.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>01.06.2023</small>
+        <h3>День защиты детей</h3>
+        <p>1 июня сотрудники сервисного депо Зауралье навестили воспитанников Введенского филиала Центр помощи детям
+            №1.</p>
+        <p>Активистки молодежной ячейки Дерхо Елена, Белоногова Екатерина и Бухтоярова Ольга приняли участие в игровой
+            программе, посвящённой Дню защиты детей.</p>
+        <p>Воспитанники предложили нашим ребятам принять участие в игре "Самый мобильный", а взамен получили от деповчан
+            фрукты и мороженое!</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2023/russia_day/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/russia_day/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/russia_day/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/russia_day/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/russia_day/5.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>13.07.2023</small>
+        <h3>День России в детском доме</h3>
+        <p>12 июня молодежная ячейка СЛД "Зауралье" устроила настоящий вкусный праздник воспитанникам Введенского
+            филиала Центра помощи детям №1.</p>
+        <p>На изготовленном работниками депо мангале активисты Кирилл Трофимов и Елена Дерхо приготовили вкусный шашлык
+            и колбаски.</p>
+        <p>Дети с огромным удовольствием приняли участие в процессе приготовления мяса на углях. Для большинства из них
+            это был первый подобный опыт.</p>
+        <p>И погода не подвела! Хорошее настроение в приятной компании было обеспечено на весь день!</p>
+        <p>Площадка была подготовлена с соблюдением требований пожарной безопасности. Рядом находились 2 бочки с водой и
+            огнетушитель.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2023/about_road/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/about_road/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/about_road/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/about_road/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/about_road/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/about_road/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/about_road/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/about_road/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/about_road/9.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>31.03.2023</small>
+        <h3>Детям о железной дороге</h3>
+        <p>В рамках реализации проекта социальных инициатив «Тепло наших рук», реализуемого в сервисном депо "Зауралье"
+            на предприятии побывали воспитанники Введенского филиала Центра помощи детям №1.</p>
+        <p>Экскурсию по предприятию провели куратор проекта, начальник технического отдела Кирилл Трофимов и
+            председатель профсоюзной организации Виталий Попов.</p>
+        <p>Поделился личным опытом с юными воспитанниками председатель Совета ветеранов депо Владимир Аристов.</p>
+        <p>Ребятам даже удалось побывать внутри новенькой "Синары", посидеть в кресле машиниста и посмотреть
+            электрическую аппаратуру электровоза.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2023/new_year_in_childhouse/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/new_year_in_childhouse/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/new_year_in_childhouse/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/new_year_in_childhouse/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/new_year_in_childhouse/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/new_year_in_childhouse/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/new_year_in_childhouse/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/new_year_in_childhouse/8.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>28.12.2023</small>
+        <h3>Новогодний праздник в детском доме</h3>
+        <p>Уже стало традицией навещать воспитанников Введенского филиала Центра помощи детям №1 в преддверии Нового
+            года.</p>
+        <p>Гостям и всем сотрудникам Центра воспитанники и педагоги показали новогоднюю сказку "Волшебное зеркало" в
+            которой Кощей стал добрым, а Дед Мороз со снегурочкой зажгли новогоднюю елку.</p>
+        <p>Активисты молодежной ячейки Сервисного локомотивного депо "Зауралье" поздравили детей с наступающим новым
+            годом, пригласили в гости и подарили сладкие мандарины и новогодние атрибуты для украшения комнат - гирлянды
+            и хлопушки.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2023/sport/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/sport/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/sport/3.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>18.01.2023</small>
+        <h3>Популяризация спорта и ЗОЖ</h3>
+        <p>Активисты депо на встрече с директором по персоналу Зыкиным А.В. в декабре предложили популяризировать
+            здоровый образ жизни в подшефном Введенском детском доме.</p>
+        <p>Алексей Владимирович поддержал предложение и оказал неоценимую помощь в приобретении спортинвентаря.</p>
+        <p>Под канун старого нового года подарки (комплекты лыж с ботинками, футбольная форма, набор для бокса и прочее)
+            были переданы воспитанникам.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2023/easter/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/easter/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/easter/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/easter/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/easter/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/easter/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/easter/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/easter/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/easter/9.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/easter/10.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>15.04.2023</small>
+        <h3>Приготовление к празднику Светлой Пасхи</h3>
+        <p>Накануне Светлого Воскресенья активисты молодежной ячейки депо навестили воспитанников Введенского филиала
+            Центра помощи детям №1.</p>
+        <p>Ребята вместе приготовили куличики и покрасили яйца - традиционные символы Пасхи.</p>
+        <p>Самые смелые даже приготовили кулич в виде паровоза!</p>
+        <p>И правда, какая Пасха без яиц? Ведь яйцо — не только символ жизни, плодородия и весеннего возрождения
+            природы. Еще задолго до Христа яйцо считали прообразом самой Вселенной. Сама форма яйца — овал — у греков
+            символизировала чудо.</p>
+        <p>На Руси существовала примета, что, если кулич удался на славу, значит, и в доме будет процветание и
+            благополучие.</p>
+        <p>У ребят все получилось на "отлично", и мы верим, что все у них сложится хорошо!</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2023/warm_of_hands/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/warm_of_hands/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/warm_of_hands/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/warm_of_hands/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/warm_of_hands/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/warm_of_hands/6.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>26.05.2023</small>
+        <h3>Тепло наших рук</h3>
+        <p>В рамках проекта социальных инициатив «Тепло наших рук», реализуемого в депо активисты молодежной ячейки
+            Трофимов Кирилл, Дерхо Елена и Михайлов Михаил, а также мастер участка РМЦ Кочуров Сергей навестили
+            воспитанников Введенского филиала Центр помощи детям №1.</p>
+        <p>Совместными усилиями произвели посадку саженцов смородины, крыжовника и винограда. Также посадили клубы
+            цветов.</p>
+        <p>Силами производственных участков изготовили и привезли 3 лавочки.</p>
+        <p>За активную работу ребята получили свежие и сочные фрукты.</p>
+        <p>Подарили воспитанникам лэпбук, разработанный |СТМ-Сервис, который позволяет в игровой форме обучить ребят
+            основам безопасного поведения на железной дороге.</p>
+        <p>Произвели замеры для изготовления труб системы полива огорода, изготовление которых начнётся в ближайшее
+            время.</p>
+
+    </div>
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2023/football_wars/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/football_wars/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/football_wars/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/football_wars/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/football_wars/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/football_wars/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/football_wars/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/football_wars/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2023/football_wars/9.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>06.02.2023</small>
+        <h3>Футбольные баталии в детском доме</h3>
+        <p>Предложение воспитанников Введенского филиала Центра помощи детям №1 о проведении футбольного матча с
+            сотрудниками сервисного депо "Зауралье" не осталось без внимания, и в прошедшую пятницу матч состоялся.</p>
+        <p>Игра была напряжённой - 2 тайма по 20 минут не смогли выявить победителя, счёт был равным 15-15.</p>
+        <p>В решающей 20-минутке юные футболисты были чуточку удачливее и игра закончилась со счётом 20-18 в пользу
+            воспитанников Центра.</p>
+        <p>После активного матча ребят ждало чаепитие с вкусными пирогами и пирожными, которые подготовили наши
+            активисты.</p>
+        <p>Ребята из нашей команды подарили соперникам брендированные рюкзаки с подарками в знак победы и похвалили
+            ребят за красивую игру.</p>
+
+    </div>
+
+</div>
 {% endblock %}

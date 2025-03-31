@@ -1,4 +1,156 @@
-{% extends 'wrappers/with_sidebar.html' %}
+{% extends 'wrappers/tabs.html' %}
 
 {% block page %}
+<div class="tab-links">
+    <div class="tab-link">"Береги природу-сортируй отходы"</div>
+    <div class="tab-link">"Всероссийский экологический субботник"</div>
+    <div class="tab-link">"День эколога"</div>
+    <div class="tab-link">Акция "Сохраним лес"</div>
+</div>
+
+<div class="tab-pages">
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_nature/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_nature/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_nature/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_nature/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_nature/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_nature/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_nature/7.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <h3>Береги природу - сортируй отходы</h3>
+        <p>С целью снижения уровня негативного воздействия на окружающую среду, повышение степени вовлеченности
+            сотрудников в решении экологических вопросов на базе Сервисного локомотивного депо
+            "Зауралье" организован пункт раздельного сбора отходов.</p>
+        <p>"Организуя раздельный сбор мусора и сдавая отходы по видам, люди способствуют уменьшению количества свалок,
+            улучшению экологической обстановки, экономят энергоресурсы," - отметила инженер по охране окружающей среды
+            депо Григорьева Дарья.</p>
+        <p>Идея этой экологической акции появилась зимой 2022 года во время рабочего визита в сервисное депо Зауралье
+            директора по работе с персоналом и административным вопросам Алексея Зыкина.</p>
+        <p>Алексей Владимирович всегда поддерживал экологические инициативы, поэтому мы, как и обещали, продолжаем
+            реализовать наши благие дела, совместные проекты и заботиться об окружающей среде.</p>
+        <p>Над созданием экоуголка трудились работники депо: мастер участка (ТР-3) Сиражиев Рашит, мастер участка по
+            ремонту оборудования и инструмента Шорин Геннадий Николаевич, бригадир хозяйственного участка Вольф Юрий,
+            бригадир участка по ремонту технологического оборудования Дворянцев Вадим, слесаря-ремонтники Харлов Роман,
+            Жеребцов Роман и Нетесов Владимир, слесаря-инструментальщики Карасёв Борис и Грамотеев Андрей,
+            электромеханик Плотников Никита, технологи Просеков Данил и Афанасьев Сергей.</p>
+        <p>С любовью, к природе.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/9.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/10.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/11.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/12.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/13.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/14.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/15.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/16.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/17.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/18.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/19.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/20.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecology_saturday/21.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <h3>Всероссийский экологический субботник “Зелёная Россия”</h3>
+        <p>Субботник — это прекрасный способ поднятия корпоративного духа, сплочения коллектива, улучшения
+            психологического климата. Ведь давно известно, что ничто так не объединяет людей, как совместный труд для
+            всех.</p>
+        <p>Октябрь — традиционное время наведения чистоты и порядка, а субботники — добрая традиция, объединяющая
+            поколения. Одним из таких приоритетов является осеннее преображение прилегающей территории.</p>
+        <p>Так, в сервисном локомотивном депо Зауралье усилиями активистов молодежной ячейки, мастеров и ремонтного
+            персонала, а также руководителей предприятия появилась «сиреневая аллея».</p>
+        <p>Сотрудники депо высадили 10 саженцев сирени и 4 вишни, создав тем самым живую изгородь в зоне спортивной
+            площадки, которая будет радовать глаз в тёплое время года.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecolog_day/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecolog_day/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecolog_day/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecolog_day/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecolog_day/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecolog_day/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecolog_day/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/ecolog_day/8.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <h3>День эколога</h3>
+        <p>Ежегодно 5 июня в России отмечают День эколога. В эту же дату установлено еще одно торжество - Всемирный день
+            окружающей среды.</p>
+        <p>Этот день призван привлечь внимание общественности к проблемам окружающей среды и напомнить о том, как хрупка
+            экосистема нашей планеты: чистый воздух, разнообразие живых организмов и здоровье людей напрямую зависят от
+            действий человека.</p>
+        <p>В преддверии Дня эколога и в сам праздник по всей стране проводятся конференции и просветительские встречи,
+            субботники, небольшие шествия и флешмобы.</p>
+        <p>И конечно же, молодежь сервисного депо "Зауралье" не осталась в стороне - было выполнено благоустройство
+            центральной клумбы депо, а накануне сданы на переработку отходы, собранные в условиях предприятия.</p>
+        <p>«Только вместе мы можем стать поколением восстановления, способным сохранить окружающую среду за счет
+            поддержания существующих на Земле экосистем и развития их биоразнообразия. Всемирный день окружающей среды
+            призван напомнить нам об этой важной миссии», - рассказала эколог депо Дарья Григорьева.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/9.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/10.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/11.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/12.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/13.jpg') }}">
+                <img src="{{ url_for('static', filename='images/ecology/2024/save_forest/14.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <h3>Сотрудники депо Зауралье за экологию</h3>
+        <p>27 сентября 2024 г., в рамках проведения Всероссийской акции «Сохраним лес» представители Сервисного
+            локомотивного депо Зауралье приняли участие в высадке саженцев хвойных культур в Кетовском муниципальном
+            округе на территории Курганского лесничества.</p>
+        <p>В России акция проходит шестой раз и реализуется в рамках национального проекта «Экология».</p>
+        <p>В этом году Акция имеет особое значение как лесоклиматический проект.</p>
+        <p>"Цель акции в 2024 году – высадить 70 миллионов деревьев, привлечь внимание широкой общественности к теме
+            бережного отношения к лесным ресурсам, а также компенсировать последствия лесных пожаров", - отметила эколог
+            депо Григорьева Дарья.</p>
+
+    </div>
+
+</div>
 {% endblock %}

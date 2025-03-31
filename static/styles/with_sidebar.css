@@ -59,6 +59,7 @@
     width: 87%;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .content h1 {
@@ -77,8 +78,6 @@
 .content__links {
     display: flex;
     flex-wrap: wrap;
-    max-height: 87vh;
-    overflow-y: auto;
 }
 
 .content__links a {
@@ -172,24 +171,6 @@
 
 .content__pagination a:last-child {
     margin-left: auto;
-}
-
-.content__scroll-wrapper {
-    overflow-y: auto;
-    max-height: 87vh;
-}
-
-.content__scroll-wrapper > img {
-    padding: 10px;
-}
-
-.content__scroll-wrapper {
-    overflow-y: auto;
-    max-height: 80vh;
-}
-
-.content__scroll-wrapper > img {
-    padding: 10px;
 }
 
 .content__photos img {

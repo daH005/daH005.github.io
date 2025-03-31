@@ -1,4 +1,122 @@
-{% extends 'wrappers/with_sidebar.html' %}
+{% extends 'wrappers/tabs.html' %}
 
 {% block page %}
+<div class="tab-links">
+    <div class="tab-link">Кулинарный мастер класс 17.03.2024</div>
+    <div class="tab-link">Нести добро 17.07.2024</div>
+    <div class="tab-link">Новый год в детском доме 28.12.2024</div>
+    <div class="tab-link">Праздник футбола 23.09.2024</div>
+</div>
+
+<div class="tab-pages">
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2024/cook/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/cook/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/cook/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/cook/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/cook/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/cook/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/cook/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/cook/8.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>17.03.2024</small>
+        <h3>Кулинарный мастер-класс для воспитанников Детского дома</h3>
+        <p>Стало традицией навещать детей Введенского филиала Центра помощи детям №1 в преддверии Масленицы.</p>
+        <p>Активисты Совета молодежи сервисного локомотивного депо "Зауралье" провели кулинарный мастер-класс для ребят
+            по приготовлению вкусных булочек.</p>
+        <p>Через час кропотливой работы, ребята дружной компанией отведали свои кулинарные шедевры!</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2024/bring_good/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/bring_good/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/bring_good/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/bring_good/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/bring_good/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/bring_good/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/bring_good/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/bring_good/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/bring_good/9.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>17.07.2024</small>
+        <h3>Нести добро</h3>
+        <p>В рамках Всероссийской акции "Добровольцы - детям" к ребятам из Введенского филиала Центра помощи детям №1
+            приехали в гости сотрудники сервисного локомотивного депо "Зауралье".</p>
+        <p>Ребят ждали весёлые спортивные эстафеты и вкусные угощения</p>
+        <p>Встреча получилась захватывающей и интересной, оставила массу положительных эмоций и впечатлений у ребят и
+            наших коллег.</p>
+        <p>Мероприятие прошло при поддержке профсоюзного комитета и молодёжной ячейки депо.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2024/new_year_in_childhouse/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/new_year_in_childhouse/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/new_year_in_childhouse/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/new_year_in_childhouse/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/new_year_in_childhouse/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/new_year_in_childhouse/6.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>28.12.2024</small>
+        <h3>Поздравление воспитанников детского дома</h3>
+        <p>Уже стало традицией навещать воспитанников Введенского филиала Центра помощи детям №1 в преддверии Нового
+            года.</p>
+        <p>Гостям и всем сотрудникам Центра воспитанники и педагоги в обновленном актовом зале показали прекрасную
+            новогоднюю сказку.</p>
+        <p>Активисты молодежной ячейки Сервисного локомотивного депо "Зауралье" поздравили детей с наступающим новым
+            годом, пригласили в гости и подарили сладкие подарки всем воспитанникам и музыкальные портативные
+            колонки.</p>
+
+    </div>
+
+    <div class="tab-page">
+
+        <div class="image-viewer">
+            <div class="image-viewer__links">
+                <img src="{{ url_for('static', filename='images/charity/2024/football_party/1.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/football_party/2.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/football_party/3.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/football_party/4.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/football_party/5.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/football_party/6.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/football_party/7.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/football_party/8.jpg') }}">
+                <img src="{{ url_for('static', filename='images/charity/2024/football_party/9.jpg') }}">
+            </div>
+            <img class="image-viewer__current-image" src="">
+        </div>
+
+        <small>23.09.2024</small>
+        <h3>Праздник футбола в Введенском детском доме</h3>
+        <p>Традиционно, активисты молодежной ячейки сервисного локомотивного депо "Зауралье" в начале осени навещают
+            воспитанников подшефного Введенского детского дома.</p>
+        <p>На этот раз состоялись футбольные баталии между друзьями детского дома - сотрудниками Специального управления
+            федеральной противопожарной службы № 71МЧС России, Следственного комитета Курганской области, сервисного
+            локомотивного депо Зауралье и командой ребят - хозяев турнира.</p>
+        <p>По итогам товарищеских игр сборная нашего депо заняла почетное 3 место! Победили юные футболисты из
+            Введенского детского дома!</p>
+        <p>Футбольный турнир завершился дружескими посиделками и вкусным обедом. Традиции – это здорово!</p>
+
+    </div>
+
+</div>
 {% endblock %}
