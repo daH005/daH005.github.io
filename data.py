@@ -1,5 +1,6 @@
 import json
-from pathlib import Path
+
+from paths import DATA_DIR
 
 __all__ = (
     'alive_employees',
@@ -9,7 +10,7 @@ __all__ = (
 
 
 def _load(filename: str):
-    return json.loads(Path('data/' + filename).read_text(encoding='utf-8'))
+    return json.loads(DATA_DIR.joinpath(filename).read_text(encoding='utf-8'))
 
 
 alive_employees = _load('alive_employees.json')

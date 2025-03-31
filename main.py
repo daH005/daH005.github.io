@@ -9,8 +9,13 @@ from flask import (
 from config import Config
 from data import alive_employees, dead_employees, trains
 from functions import take_before, take_after
+from paths import TEMPLATES_DIR, STATIC_DIR
 
-app: Flask = Flask(__name__)
+app: Flask = Flask(
+    __name__,
+    template_folder=TEMPLATES_DIR,
+    static_folder=STATIC_DIR,
+)
 
 
 @app.route('/')
