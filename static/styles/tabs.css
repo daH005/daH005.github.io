@@ -1,6 +1,7 @@
 .tab-links {
     display: flex;
-    flex-wrap: wrap;
+    min-height: fit-content;
+    overflow-x: auto;
 }
 
 .tab-link {
@@ -10,6 +11,7 @@
     color: white;
     margin-right: 5px;
     margin-bottom: 5px;
+    min-width: fit-content;
 }
 
 .tab-link--active {
@@ -58,7 +60,5 @@
 }
 
 .image-viewer__current-image {
-    object-fit: cover;
-    width: 70%;
     height: 100%;
 }
