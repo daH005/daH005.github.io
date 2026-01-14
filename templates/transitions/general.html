@@ -1,11 +1,6 @@
 {% extends 'wrappers/transition.html' %}
 
 {% block transitions %}
-<a class="transition" href="{{ url_for('tour_3d') }}">
-    <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/tour_3d.png') }}">
-    <h3 class="transition__header">3D тур</h3>
-</a>
-
 <a class="transition" href="{{ url_for('respect_book_catalog') }}">
     <img class="transition__logo" src="{{ url_for('static', filename='images/transitions/respect_book.png') }}">
     <h3 class="transition__header">Книга почёта</h3>

@@ -32,11 +32,6 @@ def transitions_general() -> str:
     )
 
 
-@app.route('/tour_3d')
-def tour_3d() -> str:
-    return 'В разработке.'
-
-
 @app.route('/respect_book')
 def respect_book_catalog() -> str:
     return _catalog(
