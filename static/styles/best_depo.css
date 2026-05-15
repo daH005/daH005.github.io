@@ -51,3 +51,7 @@ h2 {
     opacity: 0.7;
     cursor: pointer;
 }
+
+.year__card img {
+    min-width: 600px;
+}

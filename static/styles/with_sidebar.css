@@ -62,6 +62,10 @@
     overflow-y: auto;
 }
 
+.content img {
+    max-width: 100%;
+}
+
 .content h1 {
     font-size: 1.5vw;
 }
@@ -173,6 +177,26 @@
     margin-left: auto;
 }
 
+.content__photos {
+    display: flex;
+    margin-bottom: 5px;
+}
+
 .content__photos img {
-    height: 450px;
+    flex: 1;
+    width: 0;
+    margin-right: 5px;
+    object-fit: cover;
+}
+
+img.content__left-photo {
+    float: left;
+    margin-right: 20px;
+    max-width: 700px;
+}
+
+img.content__right-photo {
+    float: right;
+    margin-left: 20px;
+    max-width: 700px;
 }

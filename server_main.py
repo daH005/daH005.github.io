@@ -242,6 +242,14 @@ def quiz() -> str:
     )
 
 
+@app.route('/depo_history')
+def depo_history() -> str:
+    return render_template(
+        'depo_history.html',
+        back_endpoint='transitions_general',
+    )
+
+
 if __name__ == '__main__':
     app.run(
         debug=Config.DEBUG,
